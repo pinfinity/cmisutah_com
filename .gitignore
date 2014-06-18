@@ -19,3 +19,8 @@ TAGS
 # Vagrant state management
 .vagrant
 
+# Hide Statamic files in public repo.
+_app/***
+_config/***
+admin/***
+
