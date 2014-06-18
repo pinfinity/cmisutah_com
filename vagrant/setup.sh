@@ -89,3 +89,8 @@ echo "Restarting services ..."
 echo "************************************************************"
 sudo service php5-fpm restart
 sudo service nginx restart
+
+echo "************************************************************"
+echo "Installing RVM and newer Ruby..."
+echo "************************************************************"
+curl -sSL https://get.rvm.io | bash -s stable --ruby
