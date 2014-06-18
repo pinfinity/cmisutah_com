@@ -24,3 +24,8 @@ _app/***
 _config/***
 admin/***
 
+# Hide Logs and Cache
+_cache/*
+!_cache/index.html
+_logs/*
+!_logs/index.html
