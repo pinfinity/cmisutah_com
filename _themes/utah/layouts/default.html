@@ -8,187 +8,123 @@
     {{ theme:css tag="true" }}
 
     <script src="{{ theme_path }}js/modernizr.js"></script>
+
+    <style type="text/css">
+    .container {      
+      box-shadow: 0 0 20px #999;
+      margin: 0 auto;
+      max-width: 960px;
+    }
+    </style>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
+    <div class="container">
+      <div class="row">
+        <div class="column small-12">
 
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-        </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <nav class="row navbar">
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+            <h2 class="column small-12 medium-6 brand"><a href="/cmis_utah/">CMIS Utah</a></h2>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+            <div class="column small-4 medium-2 navbar__nav navblock">
+              <a href="/cmis_utah/">
+                <div>Home</div>
+                <div class="navblock__sub"><small>CMIS Home Page</small></div>
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
 
-        <hr />
+            <div class="column small-4 medium-2 navbar__nav navblock">
+              <a href="/cmis_utah/more_info/">
+                <div>More Info</div>
+                <div class="navblock__sub"><small>Learn more about minimally invasive surgery</small></div>
+              </a>
+            </div>
 
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
+            <div class="column small-4 medium-2 navbar__nav navblock">
+              <a href="/cmis_utah/contact/">
+                <div>Contact</div>
+                <div class="navblock__sub"><small>Contact us about your surgery</small></div>
+              </a>
             </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          </nav>
+        </div>
+      </div>  
 
           <div class="row">
           	<div class="large-12 columns">
           		{{ entries:listing folder="blog" limit="10" }}
-			 <div class="block entry">
-			    <header>
-			      <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
-			      <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
-			    </header>
+      			 <div class="block entry">
+      			    <header>
+      			      <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
+      			      <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
+      			    </header>
 
-			    {{ content }}
+      			    {{ content }}
 
-			    {{ if categories }}
-			    <p class="entry-meta"> Filed under {{ categories_url_list }}.</p>
-			    {{ endif }}
+      			    {{ if categories }}
+      			    <p class="entry-meta"> Filed under {{ categories_url_list }}.</p>
+      			    {{ endif }}
 
-			  </div>
-			{{ /entries:listing }}
+      			  </div>
+              {{ /entries:listing }}
 
-			{{ entries:pagination folder="blog" limit="10"}}
-			<div class="pagination">
-			  {{ if previous_page }}
-			    <a href="{{ previous_page }}">Previous Page</a>
-			  {{ endif }}
-			  {{ if next_page }}
-			    <a href="{{ next_page }}">Next Page</a>
-			  {{ endif }}
-			</div>
-			{{ /entries:pagination }}
+              {{ entries:pagination folder="blog" limit="10"}}
+        			<div class="pagination">
+        			  {{ if previous_page }}
+        			    <a href="{{ previous_page }}">Previous Page</a>
+        			  {{ endif }}
+        			  {{ if next_page }}
+        			    <a href="{{ next_page }}">Next Page</a>
+        			  {{ endif }}
+        			</div>
+              {{ /entries:pagination }}
           	</div>
           </div>
 
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
+    <footer class="row site-footer">
+      <div class="row">
+        
+        <div class="column small-12 medium-4 small-only-text-center">
+          <ul class="vcard">
+            <li class="fn">Center for Minimally Invasive Surgery in Utah</li>
+            <li class="street-address">123 Colonial Ave.</li>
+            <li class="locality">Caprica City</li>
+            <li><span class="state">Utah</span>, <span class="zip">12345</span></li>
+          </ul>
+        </div>
+
+        <div class="column small-12 medium-4 text-center">
+          <h4>Contact Us</h4>
+          <dl>
+            <dt>Email:</dt>
+            <dd>info@example.com</dd>
+            <dt>Phone:</dt>
+            <dd>888.888.8888</dd>
+          </dl>
+        </div>
+
+        <div class="column small-12 medium-4 text-right small-only-text-center">
+          <h4>Site Map</h4>
+          <ul class="no-bullet">
+            <li><a href="#">Link to page A</a></li>
+            <li><a href="#">Link to Another Page</a></li>
+            <li><a href="#">Very interesting article</a></li>
+            <li><a href="#">Link to a video</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>
+      <div class="row">
+        <div class="column small-12">
+          <p class="text-center">&copy; Name of Copyright Holder</p>
         </div>
       </div>
-    </div>
+    </footer>
+  </div>
+
+          
 
     <script src="{{ theme_path }}js/jquery.min.js"></script>
     <script src="{{ theme_path }}js/foundation.min.js"></script>
