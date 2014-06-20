@@ -46,12 +46,70 @@ $utah-dark:  #404041;
 
 $utah-scarring:  #65BCBE;
 
-
-
 /******************
      Header
 ******************/
+#nav-home {
+	background: $utah-blue;
 
+	&:hover {
+		background: $utah-lt-blue;
+	}
+}
+
+#nav-more {
+	background: $utah-green;
+	border: 5px solid white;
+	border-width: 0 5px;
+	
+	&:hover {
+		background: $utah-lt-green;
+	}
+}
+
+#nav-contact {
+	background: $utah-yellow;
+
+	&:hover {
+		background: $utah-lt-yellow;
+	}
+}
+
+.nav-pic {
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+nav {
+	div.column {
+		min-width:70px;
+		min-height:90px;
+	}
+
+	color: #fff;
+
+	.fa {
+		font-size: 50px;
+		color: #fff;
+	}
+
+	small {
+		font-size: 1rem;
+		color: #fff;
+	}
+}
+[id^="nav"] .navblock__sub {
+	padding: 1em;
+}
+
+[id^="nav"]:hover .nav-pic {
+	display: none;
+}
+
+[id^="nav"]:hover .navblock__sub {
+	display: inline-block;
+}
 
 /******************
      Content

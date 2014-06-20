@@ -40,6 +40,10 @@ module.exports = function(grunt) {
       sass: {
         files: 'scss/**/*.scss',
         tasks: ['sass']
+      },
+      clean: {
+        files: ['../utah/layouts/*.html'],
+        tasks: ['clean']
       }
     }
   });

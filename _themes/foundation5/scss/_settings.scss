@@ -15,13 +15,13 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(/_themes/utah/fonts/OpenSans-Light.ttf)) format('truetype');
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(/_themes/utah/fonts/OpenSans-Light.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 300;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(/_themes/utah/fonts/OpenSans-LightItalic.ttf)) format('truetype');
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(/_themes/utah/fonts/OpenSans-LightItalic.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
@@ -79,10 +79,10 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
+ $primary-color: #3FABAE;
+ $secondary-color: #E6E7E8;
 // $alert-color: #f04124;
-// $success-color: #43AC6A;
+ $success-color: #74A875;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
