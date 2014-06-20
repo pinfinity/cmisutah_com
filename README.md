@@ -37,3 +37,7 @@ from the root of the demo-dashbord project directory. Once it's up, you can log 
     vagrant ssh
 
 However, logging into the virtualbox should rarely be needed.
+
+## Notes
+- To use the new theme you'll need to navigate to `_config/settings.yaml` on your machine and change the `_theme` to `utah` near line 33.
+- Grunt runs from the  `_themes/foundation5/` directory.  `grunt clean` has been added to help deal with aggressive caching during development. It `clean` also runs during `grunt watch`.
