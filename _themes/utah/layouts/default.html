@@ -3,19 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>This is not Foundation anymore</title>
+    <title>CMIS-Utah</title>
 
     {{ theme:css tag="true" }}
 
-    <script src="{{ theme_path }}js/modernizr.js"></script>
+    <!--for placeholders until assets are in -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <style type="text/css">
-    .container {      
-      box-shadow: 0 0 20px #999;
-      margin: 0 auto;
-      max-width: 960px;
-    }
-    </style>
+    <script src="/{{ theme_path }}js/modernizr.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -27,8 +23,8 @@
             <h2 class="column small-12 medium-6 brand"><a href="/cmis_utah/">CMIS Utah</a></h2>
 
             <div class="column small-4 medium-2 navbar__nav navblock">
-              <a href="/cmis_utah/">
-                <div>Home</div>
+              <a href="/">
+                <div><i class="fa fa-home"></i> Home</div>
                 <div class="navblock__sub"><small>CMIS Home Page</small></div>
               </a>
             </div>
@@ -82,10 +78,10 @@
           	</div>
           </div>
 
-    <footer class="row site-footer">
+    <footer class="site-footer">
       <div class="row">
         
-        <div class="column small-12 medium-4 small-only-text-center">
+        <div id="address" class="column small-12 medium-4 small-only-text-center">
           <ul class="vcard">
             <li class="fn">Center for Minimally Invasive Surgery in Utah</li>
             <li class="street-address">123 Colonial Ave.</li>
@@ -94,17 +90,15 @@
           </ul>
         </div>
 
-        <div class="column small-12 medium-4 text-center">
+        <div id="contact" class="column small-12 medium-4 text-center">
           <h4>Contact Us</h4>
-          <dl>
-            <dt>Email:</dt>
-            <dd>info@example.com</dd>
-            <dt>Phone:</dt>
-            <dd>888.888.8888</dd>
-          </dl>
+          <ul class="no-bullet">
+            <li>Email: info@example.com</li>
+            <li>Phone: 888.888.8888</li>
+          </ul>
         </div>
 
-        <div class="column small-12 medium-4 text-right small-only-text-center">
+        <div id="site-map" class="column small-12 medium-4 text-right small-only-text-center">
           <h4>Site Map</h4>
           <ul class="no-bullet">
             <li><a href="#">Link to page A</a></li>
@@ -118,7 +112,7 @@
 
       <div class="row">
         <div class="column small-12">
-          <p class="text-center">&copy; Name of Copyright Holder</p>
+          <p class="text-center"><small>&copy; Pinfinity Consulting LLC</small></p>
         </div>
       </div>
     </footer>
@@ -126,8 +120,8 @@
 
           
 
-    <script src="{{ theme_path }}js/jquery.min.js"></script>
-    <script src="{{ theme_path }}js/foundation.min.js"></script>
+    <script src="/{{ theme_path }}js/jquery.min.js"></script>
+    <script src="/{{ theme_path }}js/foundation.min.js"></script>
     <script src="{{ theme:js }}"></script>
   </body>
 </html>

@@ -2,6 +2,13 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: {
+      options: {
+        force: true
+      },
+      build: ["../../_cache/_app"]
+    },
+
     copy :{
       main: {
         files: [
@@ -14,16 +21,15 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['bower_components/foundation/scss',
-                        '../utah/scss/']
+        includePaths: ['bower_components/foundation/scss']
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+          //outputStyle: 'compressed'
         },
         files: {
           'css/app.css': 'scss/app.scss',
-          '../utah/css/utah.css' : 'scss/app.scss'
+          '../utah/css/utah.css': 'scss/app.scss'
         }        
       }
     },
@@ -40,8 +46,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.registerTask('build', ['sass', 'copy']);
+
+  grunt.registerTask('build', ['clean', 'sass', 'copy']);
   grunt.registerTask('default', ['build','watch']);
 }

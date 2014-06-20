@@ -1,0 +1,76 @@
+/******************
+     Page
+******************/
+.container {      
+      box-shadow: 0 0 20px #999;
+      margin: 0 auto;
+      max-width: 960px;
+}
+
+/******************
+     Colors
+===================
+$body-bg: #fff;
+// $body-font-color: #222;
+
+Nav Blue:  #3FABAE
+Nav Green:  #74A875
+Nav Yellow:  #FDBD13
+Nav Light Blue:  #8CCDCE
+Nav Light Green:  #ACCBAC
+Nav Light Yellow:  #FED771
+
+CTA Grey bkg:  #E6E7E8
+
+Less Pain bkg:  #3FABAE
+Less Scarring bkg:  #65BCBE
+Quicker Recovery Bkg:  #8CCDCE
+
+button bkg: #404041
+
+footer bkg:  same as button bkg? - yes, #404041
+
+button text same as Nav yellow?  yes, #FDBD13
+blue Text Same as Nav blue?  yes, #3FABAE
+
+******************/
+$utah-blue: #3FABAE;
+$utah-green:  #74A875;
+$utah-yellow:  #FDBD13;
+$utah-lt-blue:  #8CCDCE;
+$utah-lt-green:  #ACCBAC;
+$utah-lt-yellow:  #FED771;
+
+$utah-grey:  #E6E7E8;
+$utah-dark:  #404041;
+
+$utah-scarring:  #65BCBE;
+
+
+
+/******************
+     Header
+******************/
+
+
+/******************
+     Content
+******************/
+
+
+/******************
+     Footer
+******************/
+footer {
+	background: $utah-dark;
+	padding-top:1.5rem;
+}
+footer, footer a {	
+	color: white;
+	text-shadow: 1px 1px 0 #000;
+}
+.vcard {
+	border: none;
+	padding: 0;
+}
+
