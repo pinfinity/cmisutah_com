@@ -242,8 +242,16 @@ footer, footer a {
 	color: white;
 	text-shadow: 1px 1px 0 #000;
 }
+footer h4{
+	color: #fff;
+	&.map {
+		color: $utah-dark;
+		text-shadow: none;
+	}
+}
 .vcard {
 	border: none;
 	padding: 0;
 }
+
 

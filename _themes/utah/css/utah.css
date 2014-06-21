@@ -5072,6 +5072,12 @@ footer, footer a {
   color: white;
   text-shadow: 1px 1px 0 black; }
 
+footer h4 {
+  color: white; }
+  footer h4.map {
+    color: #404041;
+    text-shadow: none; }
+
 .vcard {
   border: none;
   padding: 0; }
