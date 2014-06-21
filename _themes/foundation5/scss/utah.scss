@@ -61,7 +61,7 @@ $utah-scarring:  #65BCBE;
 	background: $utah-green;
 	border: 5px solid white;
 	border-width: 0 5px;
-	
+
 	&:hover {
 		background: $utah-lt-green;
 	}
@@ -99,6 +99,9 @@ nav {
 		color: #fff;
 	}
 }
+.navbar {
+	padding-bottom: 5rem;
+}
 [id^="nav"] .navblock__sub {
 	padding: 1em;
 }
@@ -114,7 +117,34 @@ nav {
 /******************
      Content
 ******************/
+#cta-img {
+	background-image: url("../img/helping.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#cta-text{
+	background: $utah-grey;
+	padding: 3.75em 1em 3.75em 3em;
 
+	h2 {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+
+	h3 {
+		font-weight: 600;
+		font-style: italic;
+		color: $utah-blue;
+	}
+}
+
+.foundation-button {
+	@extend .button;
+	background-color: $utah-dark;
+	border-color: $utah-dark;
+	color: $utah-yellow;
+
+}
 
 /******************
      Footer

@@ -57,37 +57,15 @@
           </nav>
         </div>
       </div>  
+      
+      {{ theme:partial src="cta" }}
 
-          <div class="row">
-          	<div class="large-12 columns">
-          		{{ entries:listing folder="blog" limit="10" }}
-      			 <div class="block entry">
-      			    <header>
-      			      <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
-      			      <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
-      			    </header>
+      {{ theme:partial src="tagline" }}
 
-      			    {{ content }}
+      {{ theme:partial src="reasons" }}
 
-      			    {{ if categories }}
-      			    <p class="entry-meta"> Filed under {{ categories_url_list }}.</p>
-      			    {{ endif }}
+      {{ theme:partial src="cta2" }}
 
-      			  </div>
-              {{ /entries:listing }}
-
-              {{ entries:pagination folder="blog" limit="10"}}
-        			<div class="pagination">
-        			  {{ if previous_page }}
-        			    <a href="{{ previous_page }}">Previous Page</a>
-        			  {{ endif }}
-        			  {{ if next_page }}
-        			    <a href="{{ next_page }}">Next Page</a>
-        			  {{ endif }}
-        			</div>
-              {{ /entries:pagination }}
-          	</div>
-          </div>
 
     <footer class="site-footer">
       <div class="row">

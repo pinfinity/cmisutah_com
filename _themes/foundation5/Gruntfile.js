@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       clean: {
-        files: ['../utah/layouts/*.html'],
+        files: ['../utah/layouts/*.html', '../utah/partials/*.html'],
         tasks: ['clean']
       }
     }
