@@ -4886,6 +4886,9 @@ th.hide-for-touch {
 /******************
      Page
 ******************/
+*:hover {
+  transition: all 0.1s ease; }
+
 .container {
   box-shadow: 0 0 20px #999999;
   margin: 0 auto;
@@ -4999,6 +5002,51 @@ nav {
   #tagline h2 {
     font-weight: 300;
     font-size: 2rem; }
+
+/*=== reasons ===*/
+#reason-pain {
+  background-color: #3fabae; }
+  #reason-pain .reason-icon {
+    background-image: url("../img/less_pain_icon.png"); }
+
+#reason-scarring {
+  background-color: #65bcbe; }
+  #reason-scarring .reason-icon {
+    background-image: url("../img/less_scarring_icon.png"); }
+
+#reason-recovery {
+  background-color: #8ccdce; }
+  #reason-recovery .reason-icon {
+    background-image: url("../img/quick_recovery_icon.png"); }
+
+.reason-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1em 0;
+  min-height: 147px; }
+
+.reason-row {
+  background: #65bcbe; }
+
+[id^="reason"] {
+  text-align: center; }
+  [id^="reason"] a {
+    color: white;
+    display: inline-block;
+    font-size: 1.3em;
+    margin: 1em 0 2.75rem; }
+    [id^="reason"] a:hover {
+      color: #eeeeee;
+      transform: skewX(-20deg);
+      -ms-transform: skewX(-20deg);
+      -webkit-transform: skewX(-20deg); }
+  [id^="reason"] h2 {
+    color: #222222;
+    font-weight: 300; }
+  [id^="reason"] p {
+    font-size: 0.875rem;
+    padding: 0 2em; }
 
 /******************
      Content

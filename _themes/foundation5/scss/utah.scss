@@ -1,6 +1,10 @@
 /******************
      Page
 ******************/
+*:hover {
+	transition: all 0.1s ease;
+}
+
 .container {      
       box-shadow: 0 0 20px #999;
       margin: 0 auto;
@@ -156,6 +160,60 @@ nav {
 	 	font-weight: 300;
 	 	font-size: 2rem;
 	 }
+}
+
+/*=== reasons ===*/
+#reason-pain {
+	background-color: $utah-blue;
+	.reason-icon {
+		background-image: url("../img/less_pain_icon.png");
+	}
+}
+#reason-scarring {
+	background-color: $utah-scarring;
+	.reason-icon {
+		background-image: url("../img/less_scarring_icon.png");
+	}
+}
+#reason-recovery {
+	background-color: $utah-lt-blue;
+	.reason-icon {
+		background-image: url("../img/quick_recovery_icon.png");
+	}
+}
+.reason-icon {
+	background-position: center;
+	background-repeat:no-repeat;
+	background-position:center;
+	margin: 1em 0;
+	min-height: 147px; 
+}
+.reason-row{
+	background: $utah-scarring;
+}
+[id^="reason"] {
+	text-align: center;
+	a {		
+		color: white;
+		display: inline-block;
+		font-size: 1.3em;
+		margin: 1em 0 2.75rem;
+
+		&:hover {
+			color: #eee;			
+			transform: skewX(-20deg);
+			-ms-transform:skewX(-20deg);
+			-webkit-transform:skewX(-20deg);
+		}
+	}
+	h2 {
+		color: $body-font-color;
+		font-weight: 300;
+	}
+	p {
+		font-size: .875rem;
+		padding: 0 2em;
+	}
 }
 /******************
      Content
