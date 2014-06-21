@@ -5048,6 +5048,16 @@ nav {
     font-size: 0.875rem;
     padding: 0 2em; }
 
+/*=== cta2 ===*/
+#cta2 {
+  padding: 2rem 0;
+  text-align: center; }
+  #cta2 h3 {
+    color: #3fabae;
+    font-weight: 600;
+    font-style: italic;
+    margin: 1em; }
+
 /******************
      Content
 ******************/
