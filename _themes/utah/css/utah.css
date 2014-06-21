@@ -4956,7 +4956,7 @@ nav {
     color: white; }
 
 .navbar {
-  padding-bottom: 5rem; }
+  padding-bottom: 3rem; }
 
 [id^="nav"] .navblock__sub {
   padding: 1em; }
@@ -4968,8 +4968,9 @@ nav {
   display: inline-block; }
 
 /******************
-     Content
+     Partials
 ******************/
+/*=== CTA ===*/
 #cta-img {
   background-image: url("../img/helping.jpg");
   background-repeat: no-repeat;
@@ -4991,6 +4992,17 @@ nav {
   border-color: #404041;
   color: #fdbd13; }
 
+/*=== tagline ===*/
+#tagline {
+  padding: 2rem 0;
+  text-align: center; }
+  #tagline h2 {
+    font-weight: 300;
+    font-size: 2rem; }
+
+/******************
+     Content
+******************/
 /******************
      Footer
 ******************/

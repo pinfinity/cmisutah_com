@@ -100,7 +100,7 @@ nav {
 	}
 }
 .navbar {
-	padding-bottom: 5rem;
+	padding-bottom: 3rem;
 }
 [id^="nav"] .navblock__sub {
 	padding: 1em;
@@ -115,8 +115,10 @@ nav {
 }
 
 /******************
-     Content
+     Partials
 ******************/
+
+/*=== CTA ===*/
 #cta-img {
 	background-image: url("../img/helping.jpg");
 	background-repeat: no-repeat;
@@ -145,6 +147,19 @@ nav {
 	color: $utah-yellow;
 
 }
+
+/*=== tagline ===*/
+#tagline {
+	padding: 2rem 0;
+	text-align: center;
+	 h2 {
+	 	font-weight: 300;
+	 	font-size: 2rem;
+	 }
+}
+/******************
+     Content
+******************/
 
 /******************
      Footer
