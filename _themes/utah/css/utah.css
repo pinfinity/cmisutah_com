@@ -4930,9 +4930,7 @@ blue Text Same as Nav blue?  yes, #3FABAE
     background: #8ccdce; }
 
 #nav-more {
-  background: #74a875;
-  border: 5px solid white;
-  border-width: 0 5px; }
+  background: #74a875; }
   #nav-more:hover {
     background: #accbac; }
 
@@ -4943,14 +4941,15 @@ blue Text Same as Nav blue?  yes, #3FABAE
 
 .nav-pic {
   text-align: center;
-  padding: 20px;
-  margin: 0 auto; }
+  margin: 2rem auto; }
+
+.medium-6 {
+  min-height: 1em; }
 
 nav {
   color: white; }
-  nav div.column {
-    min-width: 70px;
-    min-height: 90px; }
+  nav > div:first-of-type {
+    padding: 0; }
   nav .fa {
     font-size: 50px;
     color: white; }
@@ -4961,8 +4960,11 @@ nav {
 .navbar {
   padding-bottom: 3rem; }
 
-[id^="nav"] .navblock__sub {
-  padding: 1em; }
+[id^="nav"] {
+  border: 0 solid white;
+  border-left-width: 5px; }
+  [id^="nav"] .navblock__sub {
+    margin: 2rem auto; }
 
 [id^="nav"]:hover .nav-pic {
   display: none; }
@@ -4993,11 +4995,12 @@ nav {
 .foundation-button {
   background-color: #404041;
   border-color: #404041;
-  color: #fdbd13; }
+  color: #fdbd13;
+  font-size: 1.5rem; }
 
 /*=== tagline ===*/
 #tagline {
-  padding: 2rem 0;
+  padding: 2.2rem 1rem;
   text-align: center; }
   #tagline h2 {
     font-weight: 300;
@@ -5050,11 +5053,12 @@ nav {
 
 /*=== cta2 ===*/
 #cta2 {
-  padding: 2rem 0;
+  padding: 2.4rem 1rem;
   text-align: center; }
   #cta2 h3 {
     color: #3fabae;
     font-weight: 600;
+    font-size: 2rem;
     font-style: italic;
     margin: 1em; }
 

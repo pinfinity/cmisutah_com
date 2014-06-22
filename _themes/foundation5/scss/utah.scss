@@ -63,8 +63,6 @@ $utah-scarring:  #65BCBE;
 
 #nav-more {
 	background: $utah-green;
-	border: 5px solid white;
-	border-width: 0 5px;
 
 	&:hover {
 		background: $utah-lt-green;
@@ -81,14 +79,19 @@ $utah-scarring:  #65BCBE;
 
 .nav-pic {
 	text-align: center;
-	padding: 20px;
-	margin: 0 auto;
+	margin: 2rem auto;
+}
+.medium-6 {
+	min-height: 1em;
 }
 
 nav {
+	>div:first-of-type {
+		padding: 0;
+	}
 	div.column {
-		min-width:70px;
-		min-height:90px;
+		// min-width:70px;
+		// min-height:90px;
 	}
 
 	color: #fff;
@@ -106,8 +109,13 @@ nav {
 .navbar {
 	padding-bottom: 3rem;
 }
-[id^="nav"] .navblock__sub {
-	padding: 1em;
+[id^="nav"] {
+	border: 0 solid white;
+	border-left-width:5px; 
+
+	.navblock__sub {
+		margin: 2rem auto;
+	}
 }
 
 [id^="nav"]:hover .nav-pic {
@@ -149,12 +157,13 @@ nav {
 	background-color: $utah-dark;
 	border-color: $utah-dark;
 	color: $utah-yellow;
+	font-size: 1.5rem;
 
 }
 
 /*=== tagline ===*/
 #tagline {
-	padding: 2rem 0;
+	padding: 2.2rem 1rem;
 	text-align: center;
 	 h2 {
 	 	font-weight: 300;
@@ -218,11 +227,12 @@ nav {
 
 /*=== cta2 ===*/
 #cta2 {	
-	padding: 2rem 0;
+	padding: 2.4rem 1rem;
 	text-align: center;
 	h3 {
 		color: $utah-blue;
 		font-weight: 600;
+		font-size:2rem;
 		font-style: italic;
 		margin: 1em;
 	}
