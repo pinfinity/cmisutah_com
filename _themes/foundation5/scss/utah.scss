@@ -111,7 +111,7 @@ nav {
 }
 [id^="nav"] {
 	border: 0 solid white;
-	border-left-width:5px; 
+	border-left-width: .33em; 
 
 	.navblock__sub {
 		margin: 2rem auto;
@@ -135,6 +135,7 @@ nav {
 	background-image: url("../img/helping.jpg");
 	background-repeat: no-repeat;
     background-size: cover;
+    min-height: 20em;
 }
 #cta-text{
 	background: $utah-grey;
@@ -264,4 +265,27 @@ footer h4{
 	padding: 0;
 }
 
+/******************
+     Responsive styles
+******************/
+
+@media only screen and (max-width: 22em) {
+	#cta-img {
+		display:none;	
+	}
+
+} 
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	.navbar {
+		padding-bottom: .66rem;
+	}
+	[id^="nav"]:nth-child(2) {
+		border: 0 solid white;
+	}
+	#cta-text {
+		padding: .3em;
+	}
+
+} 
 
