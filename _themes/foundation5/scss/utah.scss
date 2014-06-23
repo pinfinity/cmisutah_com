@@ -152,6 +152,17 @@ nav {
 		color: $utah-blue;
 	}
 }
+#cta-arrow{
+	position: relative;
+	top: -1em;
+	left: 1em;
+}
+#cta-text .foundation-button:after {
+	content: url("../img/cta_arrow.png");
+	position: absolute;
+	top: -.2em;
+	left: 9.5em;
+}
 
 .foundation-button {
 	@extend .button;
@@ -288,4 +299,13 @@ footer h4{
 	}
 
 } 
+
+@media only screen and (max-width:56em) {	
+	// #cta-arrow {
+	// 	top: -5em;
+	// 	margin-left:67%;
+	// 	display: block;
+	// }
+
+}
 

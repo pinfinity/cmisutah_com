@@ -4993,6 +4993,17 @@ nav {
     font-style: italic;
     color: #3fabae; }
 
+#cta-arrow {
+  position: relative;
+  top: -1em;
+  left: 1em; }
+
+#cta-text .foundation-button:after {
+  content: url("../img/cta_arrow.png");
+  position: absolute;
+  top: -0.2em;
+  left: 9.5em; }
+
 .foundation-button {
   background-color: #404041;
   border-color: #404041;
@@ -5102,3 +5113,5 @@ footer h4 {
     border: 0 solid white; }
   #cta-text {
     padding: 0.3em; } }
+
+@media only screen and (max-width: 56em) { }

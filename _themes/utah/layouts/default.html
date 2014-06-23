@@ -126,4 +126,46 @@
     <script src="/{{ theme_path }}js/foundation.min.js"></script>
     <script src="{{ theme:js }}"></script>
   </body>
+  <style>
+
+
+#cta-arrow {
+  animation: jiggle 0.1s 4;
+  -webkit-animation: jiggle 0.1s 4;
+    -moz-animation-duration: 0.1s;
+    -moz-animation-name: jiggle;
+    -moz-animation-iteration-count: 4;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+}
+
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-2deg);
+  }
+  50% {
+      transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes jiggle {
+    0% {
+        -webkit-transform: rotate(-2deg);
+  }
+  50% {
+      -webkit-transform: rotate(2deg);
+  }
+}
+
+@-moz-keyframes jiggle {
+    0% {
+        -moz-transform: rotate(-2deg);
+  }
+  50% {
+    -moz-transform: rotate(2deg);
+  }
+}
+
+</style>
 </html>
