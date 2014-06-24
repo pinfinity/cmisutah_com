@@ -1,6 +1,6 @@
 ---
-title: Journal
 _fieldset: page
+title: Contact
 _template: page
 ---
-Content on the blog page
+# Contact Content

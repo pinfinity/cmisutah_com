@@ -1,6 +1,6 @@
 ---
-title: Journal
 _fieldset: page
+title: More Info
 _template: page
 ---
-Content on the blog page
+# Here is more Info
