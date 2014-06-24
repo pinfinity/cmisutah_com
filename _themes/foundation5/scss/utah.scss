@@ -112,6 +112,13 @@ nav {
 [id^="nav"] {
 	border: 0 solid white;
 	border-left-width: .33em; 
+	padding: 0;
+	
+	a {
+		display: inline-block;
+		height: 100%;
+		@extend .column;
+	}
 
 	.navblock__sub {
 		margin: 2rem auto;

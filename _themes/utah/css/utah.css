@@ -126,7 +126,7 @@ select {
     display: table; }
   .row:after {
     clear: both; }
-  .row.collapse > .column, .row.collapse > .columns {
+  .row.collapse > .column, .row.collapse > [id^="nav"] a, [id^="nav"] .row.collapse > a, .row.collapse > .columns {
     padding-left: 0;
     padding-right: 0; }
   .row.collapse .row {
@@ -154,7 +154,7 @@ select {
       .row .row.collapse:after {
         clear: both; }
 
-.column, .columns {
+.column, [id^="nav"] a, .columns {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -257,7 +257,7 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto; }
-  .column, .columns {
+  .column, [id^="nav"] a, .columns {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -428,7 +428,7 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto; }
-  .column, .columns {
+  .column, [id^="nav"] a, .columns {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -695,7 +695,7 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto; }
-  .column, .columns {
+  .column, [id^="nav"] a, .columns {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1976,11 +1976,11 @@ form {
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
   margin: 0 -0.5rem; }
-  form .row .row .column, form .row .row .columns {
+  form .row .row .column, form .row .row [id^="nav"] a, [id^="nav"] form .row .row a, form .row .row .columns {
     padding: 0 0.5rem; }
   form .row .row.collapse {
     margin: 0; }
-    form .row .row.collapse .column, form .row .row.collapse .columns {
+    form .row .row.collapse .column, form .row .row.collapse [id^="nav"] a, [id^="nav"] form .row .row.collapse a, form .row .row.collapse .columns {
       padding: 0; }
     form .row .row.collapse input {
       border-bottom-right-radius: 0;
@@ -3002,7 +3002,7 @@ dialog, .reveal-modal {
   @media only screen and (min-width:40.063em) {
     dialog, .reveal-modal {
       left: 50%; } }
-  dialog .column, dialog .columns, .reveal-modal .column, .reveal-modal .columns {
+  dialog .column, dialog [id^="nav"] a, [id^="nav"] dialog a, dialog .columns, .reveal-modal .column, .reveal-modal [id^="nav"] a, [id^="nav"] .reveal-modal a, .reveal-modal .columns {
     min-width: 0; }
   dialog > :first-child, .reveal-modal > :first-child {
     margin-top: 0; }
@@ -4962,7 +4962,11 @@ nav {
 
 [id^="nav"] {
   border: 0 solid white;
-  border-left-width: 0.33em; }
+  border-left-width: 0.33em;
+  padding: 0; }
+  [id^="nav"] a {
+    display: inline-block;
+    height: 100%; }
   [id^="nav"] .navblock__sub {
     margin: 2rem auto; }
 
