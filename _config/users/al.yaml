@@ -1,0 +1,13 @@
+---
+first_name: Al
+last_name: Jachimiak
+roles:
+  - admin
+email: email@example.com
+password: ""
+_uid: 2ZPsTr539edb6e6133dF2W8xr5D
+password_hash: $2a$08$a.Y7rF4FWnxW8pqxeLze6u1nehrzl2dJQoa774eYsdB.xQs00k1f6
+---
+Have no fears, your password, while plain text to start, will be encrypted upon first login. If ever you need to manually reset a password you can wipe out the password fields and start anew.
+
+Your username is the name of the YAML file. That would make this user "admin".
