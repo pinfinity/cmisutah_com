@@ -107,7 +107,16 @@
 
         <div class="row">
           <div class="column small-12">
-            <p class="text-center"><small>&copy; Pinfinity Consulting LLC</small></p>
+            <p class="text-center">
+              <small>&copy; 
+              <?php
+              $this_year = date("o");
+              if ($this_year == 2014)
+                echo $this_year . " ";
+              else
+                echo " 2014 - " . $this_year . " ";
+              ?>
+            Pinfinity Consulting LLC</small></p>
           </div>
         </div>
       </footer>
