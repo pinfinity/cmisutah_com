@@ -1,6 +1,0 @@
----
-title: Journal
-_fieldset: page
-_template: page
----
-Content on the blog page
