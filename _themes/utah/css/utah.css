@@ -5078,9 +5078,33 @@ nav {
     font-style: italic;
     margin: 1em; }
 
+/*=== sidebar ===*/
+.sidebar p {
+  font-size: 0.825rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem; }
+.sidebar .button, .sidebar .foundation-button {
+  font-size: 0.85rem; }
+
+#side-browse {
+  background-color: #e6e7e8; }
+  #side-browse a {
+    display: block;
+    margin: -1.25rem;
+    padding: 1.25rem; }
+    #side-browse a:hover {
+      background-color: #cbced0; }
+
+#side-learn {
+  background-color: #3fabae;
+  border-width: 0px; }
+
 /******************
      Content
 ******************/
+main {
+  margin-right: 1rem; }
+
 /******************
      Footer
 ******************/
@@ -5117,5 +5141,10 @@ footer h4 {
     border: 0 solid white; }
   #cta-text {
     padding: 0.3em; } }
+
+@media only screen and (min-width: 40.025em) {
+  .sidebar {
+    padding-right: 0;
+    padding-left: 0.5rem; } }
 
 @media only screen and (max-width: 56em) { }

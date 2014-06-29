@@ -256,9 +256,47 @@ nav {
 		margin: 1em;
 	}
 }
+
+/*=== sidebar ===*/
+.sidebar {
+	
+	p {
+		font-size: .825rem;
+		font-weight: 300;
+		margin-bottom: 1.5rem;
+	}
+	.button {
+		font-size: .85rem;
+	}
+}
+
+#side-browse {
+	background-color: $utah-grey;
+	a {
+		display: block;
+		margin: -1.25rem;
+		padding: 1.25rem;
+		&:hover {
+			background-color: darken($utah-grey, 10%);
+		}
+	}
+}
+
+
+
+#side-learn {
+	background-color: $utah-blue;
+	border-width: 0px
+}
+
+
+
 /******************
      Content
 ******************/
+main {
+	margin-right:1rem;
+}
 
 /******************
      Footer
@@ -306,6 +344,13 @@ footer h4{
 	}
 
 } 
+
+@media only screen and (min-width: 40.025em) {
+	.sidebar {
+		padding-right: 0;
+		padding-left:.5rem;
+	}
+}
 
 @media only screen and (max-width:56em) {	
 	// #cta-arrow {

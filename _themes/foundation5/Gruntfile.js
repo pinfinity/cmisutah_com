@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       clean: {
         files: ['../utah/layouts/*.html', 
           '../utah/partials/*.html', 
-          '../utah/_templates/*.html', 
+          '../utah/templates/*.html', 
           '../../_content/**/*.md',
           '../../_content/**/*.yaml'
         ],
