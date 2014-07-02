@@ -1,17 +1,90 @@
-<div class="row">
-	<h2>{{ title }}</h2>
+{{ theme:partial src="tagline" }}
 
-	<ol class="tree roman">
-		{{ nav max_depth="5" from="{current_url}" folders_only="false" include_content="false"}}
-			<li>
-				<a href="{{ url }}">{{ title }}</a>
-				{{ if children }}
-				<ol>
-					{{ *recursive children* }}
-				</ol>
-				{{ endif }}
-			</li>
-		{{ /nav }}
+<h2><a href="/more-info/less-pain">Less Pain</a></h2>
+<div class="row listing">
+	{{ entries:listing folder="{current_url}/less-pain" limit="4"}}
+	<div class="stub column small-12 medium-6">
+		<div class="row">
+			<div class="column small-4">
+				<img class="center" src="" alt="">
+			</div>
 
-	</ol>
+			<div class="column small-8">
+				<h5>{{title}}</h5>
+				{{ content|striptags|truncate:75 }}
+			</div>
+		</div>
+		<div class="row">
+			<a href="{{ url }}">
+			<div class="column small-4">
+				&nbsp;
+			</div>
+
+			<div class="column small-8">				
+				<span>Read More &#9654;</span>
+			</div>
+			</a>
+		</div>		
+	</div>
+	{{ /entries:listing}}
+</div>
+
+
+<h2><a href="/more-info/less-pain">Less Scarring</a></h2>
+<div class="row listing">
+	{{ entries:listing folder="{current_url}/less-scarring" limit="4"}}
+	<div class="stub column small-12 medium-6">
+		<div class="row">
+			<div class="column small-4">
+				<img class="center" src="" alt="">
+			</div>
+
+			<div class="column small-8">
+				<h5>{{title}}</h5>
+				{{ content|striptags|truncate:75 }}
+			</div>
+		</div>
+		<div class="row">
+			<a href="{{ url }}">
+			<div class="column small-4">
+				&nbsp;
+			</div>
+
+			<div class="column small-8">				
+				<span>Read More &#9654;</span>
+			</div>
+			</a>
+		</div>		
+	</div>
+	{{ /entries:listing}}
+</div>
+
+
+<h2><a href="/more-info/less-pain">Quicker Recovery</a></h2>	
+<div class="row listing">
+	{{ entries:listing folder="{current_url}/quicker-recovery" limit="4"}}
+	<div class="stub column small-12 medium-6">
+		<div class="row">
+			<div class="column small-4">
+				<img class="center" src="" alt="">
+			</div>
+
+			<div class="column small-8">
+				<h5>{{title}}</h5>
+				{{ content|striptags|truncate:75 }}
+			</div>
+		</div>
+		<div class="row">
+			<a href="{{ url }}">
+			<div class="column small-4">
+				&nbsp;
+			</div>
+
+			<div class="column small-8">				
+				<span>Read More &#9654;</span>
+			</div>
+			</a>
+		</div>		
+	</div>
+	{{ /entries:listing}}
 </div>

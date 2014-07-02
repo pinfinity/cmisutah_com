@@ -1,6 +1,6 @@
 ---
 _fieldset: page
 title: Less Scarring
-_template: page
+_template: single_category
 ---
 ### Less Scarring Content Here

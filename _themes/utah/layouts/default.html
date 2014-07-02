@@ -127,5 +127,16 @@
     <script src="/{{ theme_path }}js/jquery.min.js"></script>
     <script src="/{{ theme_path }}js/foundation.min.js"></script>
     <script src="{{ theme:js }}"></script>
+    <script>
+      $('document').ready(function() {
+        $('.stub img').each(function() {
+          var imgAttr = $(this).attr('src');
+          if (imgAttr == "") {            
+            $(this).attr('src', '/_themes/utah/img/touch_icon.png');
+            //console.log('empty image');
+          }
+        })
+      });
+    </script>
   </body>
 </html>
