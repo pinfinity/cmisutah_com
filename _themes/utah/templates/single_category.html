@@ -8,7 +8,15 @@
 	<div class="stub column small-12 medium-6">
 		<div class="row">
 			<div class="column small-4">
-				<img class="center" src="" alt="">
+				<div class="art-thumb"
+				style= 
+				{{ if article_thumbnail }}
+					"background:url({{ article_thumbnail }});"
+				{{ else }}
+					"background:url({{ theme:img src='touch_icon.png' }});"
+				{{ endif }}
+				></div>
+				<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 			</div>
 
 			<div class="column small-8">
@@ -28,6 +36,15 @@
 			</a>
 		</div>		
 	</div>
+
+	{{ if last }}
+		{{ if total_results|%:2 }}
+		<div class="column small-12 medium-6"> </div>
+		{{ endif }}
+	{{ endif}}
+
 	{{ /entries:listing}}
+
+	
 </div>
 
