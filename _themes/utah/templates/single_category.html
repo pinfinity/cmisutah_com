@@ -4,7 +4,7 @@
 
 <div class="row listing">
 
-	{{ entries:listing folder="{ current_url}" limit="3"}}
+	{{ entries:listing folder="{current_url}" limit="3"}}
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer>
 		{{ endif }}
@@ -53,6 +53,15 @@
 	{{ /entries:listing}}
 	
 </div>
+
+{{ entries:pagination limit="3"}}
+    {{ if previous_page }}
+        <a href="{{ previous_page }}">Previous Page</a>
+    {{ endif }}
+    {{ if next_page }}
+        <a href="{{ next_page }}">Next Page</a>
+    {{ endif }}
+{{ /entries:pagination }}
 
 
 
