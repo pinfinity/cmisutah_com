@@ -338,6 +338,10 @@ nav {
 	background-repeat: no-repeat;
 	background-position: center top;
 }
+.listing>div.row {
+	margin-left: 0;
+	margin-right: 0;
+}
 
 /******************
      Content
@@ -386,6 +390,13 @@ footer h4{
 	#cta-text {
 		padding: .3em;
 	}
+	.art-thumb {
+		height: auto !important;
+		width: auto !important;
+		position: relative;
+		left: 0;
+		padding-top:100%;
+	}
 
 } 
 
@@ -401,6 +412,7 @@ footer h4{
 	.stub {
 		border-left: .5em solid white;
 	}
+
 }
 
 @media only screen and (max-width:56em) {	
@@ -409,6 +421,11 @@ footer h4{
 	// 	margin-left:67%;
 	// 	display: block;
 	// }
-
+	.art-thumb {
+		height: 5rem;
+		width: 5rem;
+		position: relative;
+		left: 0;
+	}
 }
 

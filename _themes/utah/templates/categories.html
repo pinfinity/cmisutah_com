@@ -3,7 +3,10 @@
 <h2><a href="/more-info/less-pain">Less Pain</a></h2>
 <div class="row listing">
 	{{ entries:listing folder="{current_url}/less-pain" limit="4"}}
-	<div class="stub column small-12 medium-6">
+		{{ if  count|%:2 }}
+			<div class="row" data-equalizer>
+		{{ endif }}
+	<div class="stub column small-12 medium-6" >
 		<div class="row">
 			<div class="column small-4">
 				<div class="art-thumb"
@@ -17,7 +20,7 @@
 				<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 			</div>
 
-			<div class="column small-8">
+			<div class="column small-8" data-equalizer-watch>
 				<h5>{{title}}</h5>
 				{{ content|striptags|truncate:75 }}
 			</div>
@@ -35,17 +38,24 @@
 		</div>		
 	</div>
 		{{ if last }}
-			{{ if total_results|%:2 }}
+			{{ if total_results|%:2  }}
 			<div class="column small-12 medium-6"> </div>
 			{{ endif }}
 		{{ endif}}
+
+		{{ if  !(count|%:2) }}
+			</div>
+		{{ endif }}		
 	{{ /entries:listing}}
 </div>
 
 
-<h2><a href="/more-info/less-pain">Less Scarring</a></h2>
+<h2><a href="/more-info/less-scarring">Less Scarring</a></h2>
 <div class="row listing">
 	{{ entries:listing folder="{current_url}/less-scarring" limit="4"}}
+		{{ if  count|%:2 }}
+			<div class="row" data-equalizer>
+		{{ endif }}
 	<div class="stub column small-12 medium-6">
 		<div class="row">
 			<div class="column small-4">
@@ -60,7 +70,7 @@
 				<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 			</div>
 
-			<div class="column small-8">
+			<div class="column small-8" data-equalizer-watch>
 				<h5>{{title}}</h5>
 				{{ content|striptags|truncate:75 }}
 			</div>
@@ -82,13 +92,20 @@
 			<div class="column small-12 medium-6"> </div>
 			{{ endif }}
 		{{ endif}}
+
+		{{ if  !(count|%:2) }}
+			</div>
+		{{ endif }}	
 	{{ /entries:listing}}
 </div>
 
 
-<h2><a href="/more-info/less-pain">Quicker Recovery</a></h2>	
+<h2><a href="/more-info/quicker-recovery">Quicker Recovery</a></h2>	
 <div class="row listing">
 	{{ entries:listing folder="{current_url}/quicker-recovery" limit="4"}}
+		{{ if  count|%:2 }}
+			<div class="row" data-equalizer>
+		{{ endif }}
 	<div class="stub column small-12 medium-6">
 		<div class="row">
 			<div class="column small-4">
@@ -103,7 +120,7 @@
 				<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 			</div>
 
-			<div class="column small-8">
+			<div class="column small-8" data-equalizer-watch>
 				<h5>{{title}}</h5>
 				{{ content|striptags|truncate:75 }}
 			</div>
@@ -125,5 +142,9 @@
 			<div class="column small-12 medium-6"> </div>
 			{{ endif }}
 		{{ endif}}
+
+		{{ if  !(count|%:2) }}
+			</div>
+		{{ endif }}	
 	{{ /entries:listing}}
 </div>

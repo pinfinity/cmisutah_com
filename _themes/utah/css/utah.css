@@ -5143,6 +5143,10 @@ nav {
   background-repeat: no-repeat;
   background-position: center top; }
 
+.listing > div.row {
+  margin-left: 0;
+  margin-right: 0; }
+
 /******************
      Content
 ******************/
@@ -5181,7 +5185,13 @@ footer h4 {
   [id^="nav"]:nth-child(2) {
     border: 0 solid white; }
   #cta-text {
-    padding: 0.3em; } }
+    padding: 0.3em; }
+  .art-thumb {
+    height: auto !important;
+    width: auto !important;
+    position: relative;
+    left: 0;
+    padding-top: 100%; } }
 
 /* only large screens */
 @media only screen and (min-width: 40.025em) {
@@ -5193,4 +5203,9 @@ footer h4 {
   .stub {
     border-left: 0.5em solid white; } }
 
-@media only screen and (max-width: 56em) { }
+@media only screen and (max-width: 56em) {
+  .art-thumb {
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    left: 0; } }
