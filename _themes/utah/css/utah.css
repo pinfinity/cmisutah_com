@@ -5147,6 +5147,28 @@ nav {
   margin-left: 0;
   margin-right: 0; }
 
+/*=== article listing ===*/
+.pagination {
+  margin: 2rem 0; }
+
+.pagination .button, .pagination .foundation-button {
+  background-color: #e6e7e8;
+  color: #3fabae;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 2.5em; }
+  .pagination .button:hover {
+    background-color: #3fabae;
+    color: white; }
+  .pagination .button.disabled {
+    background-color: #f3f4f4;
+    color: #8ccdce; }
+    .pagination .button.disabled:hover {
+      background-color: #f3f4f4;
+      color: #8ccdce; }
+
 /******************
      Content
 ******************/
@@ -5165,7 +5187,8 @@ footer, footer a {
   text-shadow: 1px 1px 0 black; }
 
 footer h4 {
-  color: white; }
+  color: white;
+  margin-bottom: 1rem; }
 
 .vcard {
   border: none;

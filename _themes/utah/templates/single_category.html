@@ -4,7 +4,7 @@
 
 <div class="row listing">
 
-	{{ entries:listing folder="{current_url}" limit="3"}}
+	{{ entries:listing folder="{current_url}" limit="2"}}
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer>
 		{{ endif }}
@@ -54,14 +54,21 @@
 	
 </div>
 
-{{ entries:pagination limit="3"}}
-    {{ if previous_page }}
-        <a href="{{ previous_page }}">Previous Page</a>
+<div class="pagination row text-right small-only-text-center">
+{{ entries:pagination limit="2"}}
+	<div class="column small-12 medium-5 medium-offset-7">
+	{{ if total_pages > 1}}
+	    {{ loop times="{ total_pages }" }}
+	        {{ if index == current_page }}
+	            <a class="button disabled">{{ index }}</a>
+	        {{ else }}
+	        	<a class="button" href="{{ url }}?page={{ index }}">{{ index }}</a>
+	        {{ endif }}
+	    {{ /loop }}
     {{ endif }}
-    {{ if next_page }}
-        <a href="{{ next_page }}">Next Page</a>
-    {{ endif }}
-{{ /entries:pagination }}
+    </div>
 
+{{ /entries:pagination }}
+</div>
 
 

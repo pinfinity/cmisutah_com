@@ -343,6 +343,33 @@ nav {
 	margin-right: 0;
 }
 
+/*=== article listing ===*/
+.pagination {
+	margin: 2rem 0;
+
+}
+.pagination .button{
+	background-color: $utah-grey;
+	color: $utah-blue;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left:0;
+	padding-right: 0;
+	min-width: 2.5em;
+	&:hover {
+		background-color: $utah-blue;
+		color: white;
+	}
+	&.disabled {
+		background-color: lighten($utah-grey, 5%);
+		color: $utah-lt-blue;
+		&:hover {
+			background-color: lighten($utah-grey, 5%);
+			color: $utah-lt-blue;
+		}
+	}
+}
+
 /******************
      Content
 ******************/
@@ -363,6 +390,7 @@ footer, footer a {
 }
 footer h4{
 	color: #fff;
+	margin-bottom: 1rem;
 }
 .vcard {
 	border: none;
