@@ -4,7 +4,7 @@
 
 <div class="row listing">
 
-	{{ entries:listing folder="{current_url}" limit="2"}}
+	{{ entries:listing folder="{current_url}" limit="8"}}
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer>
 		{{ endif }}
@@ -55,7 +55,7 @@
 </div>
 
 <div class="pagination row text-right small-only-text-center">
-{{ entries:pagination limit="2"}}
+{{ entries:pagination limit="8"}}
 	<div class="column small-12 medium-5 medium-offset-7">
 	{{ if total_pages > 1}}
 	    {{ loop times="{ total_pages }" }}
