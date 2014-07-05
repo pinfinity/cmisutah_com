@@ -137,6 +137,15 @@ nav {
 	max-width:100%;
 }
 
+/*=== Read More Arrow ===*/
+span.readmore {
+	top: 0 !important;
+	font-size: .6rem;
+}
+span.readmore:before {
+	content: "\25B6";
+}
+
 /******************
      Partials
 ******************/
