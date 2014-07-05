@@ -132,6 +132,10 @@ nav {
 [id^="nav"]:hover .navblock__sub {
 	display: inline-block;
 }
+/* firefox nav fix */
+.navblock__sub {
+	max-width:100%;
+}
 
 /******************
      Partials
