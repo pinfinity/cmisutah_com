@@ -122,6 +122,43 @@
           </div>
         </div>
       </footer>
+
+      <div id="download" class="reveal-modal" data-reveal>
+        <h2>Minimally Invasive Surgery means less pain, less scarring, and quicker recovery!</h2>
+        <div class="clearfix">
+          <img src="/assets/img/packet-image.jpg" alt="packet image" class="right" style="max-height:34%">
+          <p>Explainer: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora magni veritatis sed porro sequi illum! Hic soluta odio voluptatibus facere exercitationem nihil nesciunt, nisi, illum unde, voluptas doloribus eum cupiditate.</p>
+        </div>
+        
+        <br>
+       
+        <form class="clear" data-abide>
+        <div class="first-name-field">
+          <label>First name <small>required</small>
+             <input type="text" id="first-name" required placeholder="First name">
+          </label>
+          <small class="error">First name is required.</small>
+        </div>
+
+        <div class="last-name-field">
+          <label>Last name <small>required</small>
+             <input type="text" id="last-name" required placeholder="Last name">
+          </label>
+          <small class="error">Last name is required.</small>
+        </div>
+        <div class="email-field">
+          <label>Email <small>required</small>
+            <input type="email" id="email" required placeholder="Email">
+          </label>
+          <small class="error">An email address is required.</small>
+        </div>
+        <button type="submit" onclick="SendInfo()">Submit</button>
+      </form>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
+
+      
+
     </div>
 
           
@@ -129,16 +166,15 @@
     <script src="/{{ theme_path }}js/jquery.min.js"></script>
     <script src="/{{ theme_path }}js/foundation.min.js"></script>
     <script src="{{ theme:js }}"></script>
-    <script>
-      $('document').ready(function() {
-        $('.stub img').each(function() {
-          var imgAttr = $(this).attr('src');
-          if (imgAttr == "") {            
-            $(this).attr('src', '/_themes/utah/img/touch_icon.png');
-            //console.log('empty image');
-          }
-        })
-      });
+    <script type="text/javascript">
+      function SendInfo() {
+        var first = $("#first-name").val();
+        var last = $("#last-name").val();
+        var email = $("#email").val();
+
+        alert("Hello!  This script is on the bottom of the default layout. \n \n var first == " + first + "\nvar last == " + last + "\nvar email == " + email);
+      }
     </script>
+    
   </body>
 </html>
