@@ -172,16 +172,13 @@ span.readmore:before {
 		color: $utah-blue;
 	}
 }
-#cta-arrow{
-	position: relative;
-	top: -1em;
-	left: 1em;
-}
 #cta-text .foundation-button:after {
 	content: url("../img/cta_arrow.png");
 	position: absolute;
 	top: -.2em;
 	left: 9.5em;
+	overflow: hidden;
+
 }
 
 .foundation-button {
@@ -438,7 +435,9 @@ footer h4{
 		left: 0;
 		padding-top:100%;
 	}
-
+	#cta-text .foundation-button:after {
+		max-width:16%;
+	}
 } 
 
 /* only large screens */
@@ -456,12 +455,7 @@ footer h4{
 
 }
 
-@media only screen and (max-width:56em) {	
-	// #cta-arrow {
-	// 	top: -5em;
-	// 	margin-left:67%;
-	// 	display: block;
-	// }
+@media only screen and (max-width:56em) {
 	.art-thumb {
 		height: 5rem;
 		width: 5rem;

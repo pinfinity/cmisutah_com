@@ -5009,16 +5009,12 @@ span.readmore:before {
     font-style: italic;
     color: #3fabae; }
 
-#cta-arrow {
-  position: relative;
-  top: -1em;
-  left: 1em; }
-
 #cta-text .foundation-button:after {
   content: url("../img/cta_arrow.png");
   position: absolute;
   top: -0.2em;
-  left: 9.5em; }
+  left: 9.5em;
+  overflow: hidden; }
 
 .foundation-button {
   background-color: #404041;
@@ -5226,7 +5222,9 @@ footer h4 {
     width: auto !important;
     position: relative;
     left: 0;
-    padding-top: 100%; } }
+    padding-top: 100%; }
+  #cta-text .foundation-button:after {
+    max-width: 16%; } }
 
 /* only large screens */
 @media only screen and (min-width: 40.025em) {
