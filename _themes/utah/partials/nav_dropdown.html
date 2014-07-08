@@ -1,8 +1,18 @@
-<div class="row text-center">
-	<a href="#" data-dropdown="drop1" class="button dropdown utah-drop">Table of Contents</a><br>
+<div class="row">
+	<h2 style="display:inline">CMIS means</h2>
+	{{ nav max_depth="2" from="/more-info" folders_only="true"}}
+		{{ if url == current_url }}			
+			<a href="#" data-dropdown="drop1" class="button dropdown utah-drop">{{title}}</a><br>
+		{{ endif }}
+	{{ /nav }}
+
+
 	<ul id="drop1" data-dropdown-content class="f-dropdown">
-		{{ nav max_depth="2" from="/more-info" folders_only="true"}}
-			<li><a href="{{ url }}">{{ title }}</a></li>
+		{{ nav max_depth="4" from="/more-info" folders_only="true"}}
+			{{ if url != current_url }}	
+				<li><a href="{{ url }}">{{ title }}</a></li>
+			{{ endif }}
 		{{ /nav }}
 	</ul>
+
 </div>
