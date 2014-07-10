@@ -94,3 +94,8 @@ echo "************************************************************"
 echo "Installing RVM and newer Ruby..."
 echo "************************************************************"
 curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+echo "************************************************************"
+echo "Correct ownership of the FPM socket ..."
+echo "************************************************************"
+sudo chown vagrant:www-data /var/run/php5-fpm-cmisutah_com.socket

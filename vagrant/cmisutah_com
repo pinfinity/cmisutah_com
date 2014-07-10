@@ -30,7 +30,7 @@ server {
 	# Return a static file, if it exists, or pass to front controller
 	location / {
 		rewrite ^/admin.php.*$ /admin.php;
-		try_files $uri $uri/ /index.php;
+		try_files $uri $uri/ /index.php?$args;
 	}
 
 	# Pass PHP requests on to PHP-FPM
