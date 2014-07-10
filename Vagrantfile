@@ -13,6 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network 'forwarded_port', guest: 8000, host: 8000
 
+  config.vm.network "public_network"
+
   config.ssh.forward_agent = true
   config.vm.provision 'shell', path: 'vagrant/setup.sh'
 end
