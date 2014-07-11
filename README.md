@@ -38,6 +38,10 @@ from the root of the demo-dashbord project directory. Once it's up, you can log 
 
 However, logging into the virtualbox should rarely be needed.
 
+## Note
+
+For the time being, in order to keep the cmis fpm socket with the correct ownership, the vagrant VM needs to brought up with `vagrant up --provision` every time.
+
 ## Notes
 - To use the new theme you'll need to navigate to `_config/settings.yaml` on your machine and change the `_theme` to `utah` near line 33.
 - Grunt runs from the  `_themes/foundation5/` directory.  `grunt clean` has been added to help deal with aggressive caching during development. It `clean` also runs during `grunt watch`.

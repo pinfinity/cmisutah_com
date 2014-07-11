@@ -82,6 +82,7 @@ echo "Configuring Nginx site"
 echo "************************************************************"
 sudo cp /vagrant/vagrant/nginx_default /etc/nginx/sites-available/default
 sudo cp /vagrant/vagrant/cmisutah_com /etc/nginx/sites-enabled/cmisutah_com
+sudo cp /vagrant/vagrant/nginx.conf /etc/nginx/nginx.conf
 
 
 echo "************************************************************"
