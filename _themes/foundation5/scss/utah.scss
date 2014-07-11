@@ -398,9 +398,8 @@ footer, footer a {
 	color: white;
 	text-shadow: 1px 1px 0 #000;
 }
-footer h4{
+footer h3{
 	color: #fff;
-	margin-bottom: 1rem;
 }
 .vcard {
 	border: none;
@@ -437,6 +436,9 @@ footer h4{
 	}
 	#cta-text .foundation-button:after {
 		max-width:16%;
+	}
+	footer .small-12 {
+		margin-bottom: 3rem;
 	}
 } 
 

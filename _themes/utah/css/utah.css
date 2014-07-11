@@ -5194,9 +5194,8 @@ footer, footer a {
   color: white;
   text-shadow: 1px 1px 0 black; }
 
-footer h4 {
-  color: white;
-  margin-bottom: 1rem; }
+footer h3 {
+  color: white; }
 
 .vcard {
   border: none;
@@ -5224,7 +5223,9 @@ footer h4 {
     left: 0;
     padding-top: 100%; }
   #cta-text .foundation-button:after {
-    max-width: 16%; } }
+    max-width: 16%; }
+  footer .small-12 {
+    margin-bottom: 3rem; } }
 
 /* only large screens */
 @media only screen and (min-width: 40.025em) {

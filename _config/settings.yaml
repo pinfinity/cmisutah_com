@@ -70,7 +70,7 @@ _content_type: markdown
 _enable_smartypants: true
 
 # set to 'true' to enable theme caching busting based on last modified timestamps
-_theme_cache_bust: true
+_theme_cache_bust: false
 
 # Specify where to save transformed images
 _transform_destination: false
