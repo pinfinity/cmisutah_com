@@ -398,6 +398,15 @@ span.readmore:before {
 		-webkit-transform: skewX(-20deg);
 	}
 }
+.utah-drop, .utah-drop:hover {
+	@extend .dropdown;
+	border: 1px solid $utah-grey;
+	background: #fff;
+	color: $utah-blue;
+}
+.dropdown.button:after, button.dropdown:after {
+	border-color: $utah-blue transparent transparent transparent;
+}
 /******************
      Content
 ******************/

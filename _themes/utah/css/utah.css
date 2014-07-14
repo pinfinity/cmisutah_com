@@ -4164,7 +4164,7 @@ meta.foundation-mq-topbar {
       right: 0; }
     .top-bar-section .has-dropdown.moved {
       position: static; }
-      .top-bar-section .has-dropdown.moved > .dropdown {
+      .top-bar-section .has-dropdown.moved > .dropdown, .top-bar-section .has-dropdown.moved > .utah-drop, .top-bar-section .has-dropdown.moved > .utah-drop:hover {
         display: block;
         position: static !important;
         height: auto;
@@ -4175,7 +4175,7 @@ meta.foundation-mq-topbar {
         width: 100%; }
       .top-bar-section .has-dropdown.moved > a:after {
         display: none; }
-  .top-bar-section .dropdown {
+  .top-bar-section .dropdown, .top-bar-section .utah-drop, .top-bar-section .utah-drop:hover {
     padding: 0;
     position: absolute;
     left: 100%;
@@ -4283,14 +4283,14 @@ meta.foundation-mq-topbar {
         top: 22.5px; }
     .top-bar-section .has-dropdown.moved {
       position: relative; }
-      .top-bar-section .has-dropdown.moved > .dropdown {
+      .top-bar-section .has-dropdown.moved > .dropdown, .top-bar-section .has-dropdown.moved > .utah-drop, .top-bar-section .has-dropdown.moved > .utah-drop:hover {
         display: block;
         position: absolute !important;
         height: 1px;
         width: 1px;
         overflow: hidden;
         clip: rect(1px, 1px, 1px, 1px); }
-    .top-bar-section .has-dropdown.hover > .dropdown, .top-bar-section .has-dropdown.not-click:hover > .dropdown {
+    .top-bar-section .has-dropdown.hover > .dropdown, .top-bar-section .has-dropdown.hover > .utah-drop, .top-bar-section .has-dropdown.hover > .utah-drop:hover, .top-bar-section .has-dropdown.not-click:hover > .dropdown, .top-bar-section .has-dropdown.not-click:hover > .utah-drop, .top-bar-section .has-dropdown.not-click:hover > .utah-drop:hover {
       display: block;
       position: static !important;
       height: auto;
@@ -4305,7 +4305,7 @@ meta.foundation-mq-topbar {
       margin-top: -1px;
       right: 5px;
       line-height: 1.2; }
-    .top-bar-section .dropdown {
+    .top-bar-section .dropdown, .top-bar-section .utah-drop, .top-bar-section .utah-drop:hover {
       left: 0;
       top: auto;
       background: transparent;
@@ -4325,7 +4325,7 @@ meta.foundation-mq-topbar {
       .top-bar-section .dropdown li label {
         white-space: nowrap;
         background: #333333; }
-      .top-bar-section .dropdown li .dropdown {
+      .top-bar-section .dropdown li .dropdown, .top-bar-section .dropdown li .utah-drop, .top-bar-section .dropdown li .utah-drop:hover {
         left: 100%;
         top: 0; }
     .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
@@ -4339,15 +4339,15 @@ meta.foundation-mq-topbar {
       background: #333333;
       padding: 0 15px;
       height: 45px; }
-    .top-bar-section .right li .dropdown {
+    .top-bar-section .right li .dropdown, .top-bar-section .right li .utah-drop, .top-bar-section .right li .utah-drop:hover {
       left: auto;
       right: 0; }
-      .top-bar-section .right li .dropdown li .dropdown {
+      .top-bar-section .right li .dropdown li .dropdown, .top-bar-section .right li .dropdown li .utah-drop, .top-bar-section .right li .dropdown li .utah-drop:hover {
         right: 100%; }
-    .top-bar-section .left li .dropdown {
+    .top-bar-section .left li .dropdown, .top-bar-section .left li .utah-drop, .top-bar-section .left li .utah-drop:hover {
       right: auto;
       left: 0; }
-      .top-bar-section .left li .dropdown li .dropdown {
+      .top-bar-section .left li .dropdown li .dropdown, .top-bar-section .left li .dropdown li .utah-drop, .top-bar-section .left li .dropdown li .utah-drop:hover {
         left: 100%; }
   .no-js .top-bar-section ul li:hover > a {
     background: #272727;
@@ -4355,7 +4355,7 @@ meta.foundation-mq-topbar {
   .no-js .top-bar-section ul li:active > a {
     background: #3fabae;
     color: white; }
-  .no-js .top-bar-section .has-dropdown:hover > .dropdown {
+  .no-js .top-bar-section .has-dropdown:hover > .dropdown, .no-js .top-bar-section .has-dropdown:hover > .utah-drop, .no-js .top-bar-section .has-dropdown:hover > .utah-drop:hover {
     display: block;
     position: static !important;
     height: auto;
@@ -5191,6 +5191,14 @@ span.readmore:before {
     transform: skewX(-20deg);
     -ms-transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg); }
+
+.utah-drop, .utah-drop:hover {
+  border: 1px solid #e6e7e8;
+  background: white;
+  color: #3fabae; }
+
+.dropdown.button:after, button.dropdown:after {
+  border-color: #3fabae transparent transparent transparent; }
 
 /******************
      Content
