@@ -5213,9 +5213,13 @@ footer {
   background: #404041;
   padding-top: 1.5rem; }
 
-footer, footer a {
+footer {
   color: white;
   text-shadow: 1px 1px 0 black; }
+
+footer a {
+  color: #3fabae;
+  text-shadow: none; }
 
 footer h3 {
   color: white; }

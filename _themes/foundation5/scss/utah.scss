@@ -421,9 +421,13 @@ footer {
 	background: $utah-dark;
 	padding-top:1.5rem;
 }
-footer, footer a {	
+footer{	
 	color: white;
 	text-shadow: 1px 1px 0 #000;
+}
+footer a {	
+	color: $utah-blue;
+	text-shadow: none;
 }
 footer h3{
 	color: #fff;
