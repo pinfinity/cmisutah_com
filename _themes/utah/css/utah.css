@@ -5177,6 +5177,13 @@ span.readmore:before {
       background-color: #f3f4f4;
       color: #8ccdce; }
 
+.cat-link {
+  margin-left: 16px;
+  margin-top: 2em;
+  font-weight: 300; }
+  .cat-link:first-of-type {
+    margin-top: 0; }
+
 /******************
      Content
 ******************/
