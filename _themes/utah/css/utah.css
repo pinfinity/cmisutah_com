@@ -5114,28 +5114,32 @@ span.readmore:before {
   border-bottom: 0.5em solid white;
   padding: 0.825em 0.825em 0;
   overflow: hidden; }
+  .stub a {
+    color: black; }
+    .stub a:hover {
+      color: black; }
   .stub img {
     border-radius: 100%;
     max-width: 7.5rem;
     min-width: 7.45rem;
     position: relative;
     left: 0.825rem; }
-  .stub a {
+  .stub .band {
     background-color: #e6e7e8;
     display: block;
     margin-top: 0.5rem;
     padding: 1.25rem 0; }
-    .stub a span {
+    .stub .band span {
       position: relative;
       top: -0.5rem; }
 
 .stub:hover {
   background-color: #8ccdce; }
-  .stub:hover a {
+  .stub:hover .band {
     background-color: #3fabae; }
-    .stub:hover a span {
+    .stub:hover .band span {
       color: white; }
-    .stub:hover a :hover {
+    .stub:hover .band :hover {
       color: #e6e7e8; }
 
 .f-dropdown {
@@ -5183,6 +5187,10 @@ span.readmore:before {
   font-weight: 300; }
   .cat-link:first-of-type {
     margin-top: 0; }
+  .cat-link:hover {
+    transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); }
 
 /******************
      Content

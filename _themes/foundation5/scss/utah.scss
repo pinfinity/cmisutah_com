@@ -303,7 +303,13 @@ span.readmore:before {
 	border-bottom: .5em solid white;
 	padding: .825em .825em 0;
 	overflow: hidden;
-
+	
+	a {
+		color:#000;
+		&:hover{
+			color:#000;
+		}
+	}
 	img {
 		border-radius: 100%;
 		max-width:7.5rem;
@@ -311,7 +317,7 @@ span.readmore:before {
 		position: relative;
 		left: .825rem;
 	}
-	a {		
+	.band {		
 		background-color: $utah-grey;		
 		display:block;
 		margin-top: .5rem;
@@ -325,7 +331,7 @@ span.readmore:before {
 }
 .stub:hover {
 	background-color: $utah-lt-blue;
-	a {	
+	.band {	
 		background-color: $utah-blue;
 		span {
 			color: white;
@@ -385,6 +391,11 @@ span.readmore:before {
 	font-weight: 300;
 	&:first-of-type {
 		margin-top: 0;
+	}
+	&:hover {
+		transform: skewX(-20deg);
+		-ms-transform: skewX(-20deg);
+		-webkit-transform: skewX(-20deg);
 	}
 }
 /******************
