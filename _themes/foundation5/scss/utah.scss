@@ -296,6 +296,9 @@ span.readmore:before {
 	background-color: $utah-lt-blue;
 	border-width: 0px
 }
+[id^="side"] p {
+	font-size: 1rem;
+}
 /*=== article listing ===*/
 
 .stub {

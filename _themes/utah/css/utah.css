@@ -5108,6 +5108,9 @@ span.readmore:before {
   background-color: #8ccdce;
   border-width: 0px; }
 
+[id^="side"] p {
+  font-size: 1rem; }
+
 /*=== article listing ===*/
 .stub {
   background-color: #f3f4f4;
