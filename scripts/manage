@@ -1,0 +1,60 @@
+#!/bin/bash
+BIN="$(cd `dirname "$0"` && pwd)"
+BASE="$( dirname "$BIN" )"
+
+fail () {
+  echo "$@" >&2
+  exit 1
+}
+
+main () {
+  local cmd="$1"
+  case $cmd in
+    'deploy')
+      shift
+      deploy "$@"
+      ;;
+    * )
+      echo "
+Exiting without running any operations.
+Possible operations include:
+
+  deploy - Deploy website to the target box.
+  Usage: bin/manage deploy <ip address or domain name>
+      "
+      ;;
+  esac
+}
+
+remote_sync () {
+    local src=$1
+    local dest=$2
+    local no_delete=$3
+
+    local rsync_opts="\
+    --recursive \
+    --compress \
+    --links \
+    --perms \
+    --times \
+    --omit-dir-times \
+    --progress \
+    --human-readable \
+    --exclude-from=$BASE/_config/deploy_exclude.list \
+    "
+    if [ "$no_delete" != "--no-delete" ]; then
+        rsync_opts="--delete $rsync_opts"
+    fi
+    rsync $rsync_opts "$src" "$dest"
+}
+
+deploy () {
+  local target="$1"
+  if [ -z $target ]; then
+    fail "The target argument is required."
+  fi
+
+  remote_sync "$BASE" "$target:/vagrant/properties/"
+}
+
+main "$@"
