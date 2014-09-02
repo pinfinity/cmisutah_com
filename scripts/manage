@@ -14,13 +14,20 @@ main () {
       shift
       deploy "$@"
       ;;
+    'save')
+      shift
+      commit "$@"
+      ;;
     * )
       echo "
 Exiting without running any operations.
 Possible operations include:
 
   deploy - Deploy website to the target box.
-  Usage: bin/manage deploy <ip address or domain name>
+  Usage: scripts/manage deploy <ip address or domain name>
+
+  save - Create a commit with commit message and push to origin/master.
+  Usage: scripts/manage save
       "
       ;;
   esac
@@ -55,6 +62,14 @@ deploy () {
   fi
 
   remote_sync "$BASE" "$target:/vagrant/properties/"
+}
+
+commit () {
+  cd "$BASE"
+  git checkout master
+  git add .
+  git commit -m "Scripted commit $( date )"
+  git push origin master
 }
 
 main "$@"
