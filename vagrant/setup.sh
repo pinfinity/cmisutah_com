@@ -17,7 +17,7 @@ sudo apt-get install -y build-essential git-core vim curl wget
 echo "************************************************************"
 echo "Adding ppa:nginx/stable ppa:chris-lea/node.js"
 echo "************************************************************"
-sudo apt-add-repository -y ppa:nginx/stable
+#sudo apt-add-repository -y ppa:nginx/stable
 sudo apt-add-repository -y ppa:chris-lea/node.js
 
 echo "************************************************************"
@@ -94,7 +94,7 @@ sudo service nginx restart
 echo "************************************************************"
 echo "Installing RVM and newer Ruby..."
 echo "************************************************************"
-curl -sSL https://get.rvm.io | bash -s stable --ruby
+#curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 echo "************************************************************"
 echo "Correct ownership of the FPM socket ..."
