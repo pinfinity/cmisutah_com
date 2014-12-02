@@ -94,7 +94,7 @@ sudo service nginx restart
 echo "************************************************************"
 echo "Installing RVM and newer Ruby..."
 echo "************************************************************"
-#curl -sSL https://get.rvm.io | bash -s stable --ruby
+curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 echo "************************************************************"
 echo "Correct ownership of the FPM socket ..."
