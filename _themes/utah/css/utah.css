@@ -5817,7 +5817,8 @@ span.readmore:before {
   padding: 0.825em 0.825em 0;
   overflow: hidden; }
   .stub a {
-    color: black; }
+    color: black;
+    line-height: 1em; }
     .stub a:hover {
       color: black; }
   .stub img {
