@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMIS-Utah</title>
+
+    <link rel="icon" type="image/png" href="{{ theme:img src='favicon.png' }}" />
+
+    <link href="{{ theme:img src='touch_icon.png' }}" rel="apple-touch-icon"></link>
+
+    {{ theme:css tag="true" }}
+
+    <!--for placeholders until assets are in -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="/{{ theme_path }}js/modernizr.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column small-12">
+          <nav class="row navbar">
+
+            <h2 class="column small-12 medium-6 brand small-only-text-center">
+              <a href="/">
+                <img src="{{ theme:img src='logo.png' }}" alt="Logo">
+              </a>
+            </h2>
+
+            <div class="column small-12 medium-6">
+
+              <div class="show-for-medium-up column medium-6"></div>
+
+              <div id="nav-home" class="column small-4 medium-2 navbar__nav navblock">
+                <a href="/">
+                  <div class="nav-pic">
+                    <img src="{{ theme:img src='nav_home_icon.png' }}" alt="home">
+                  </div>
+                  <div class="navblock__sub hide">
+                    <img src="{{ theme:img src='nav_home_icon_hover.png' }}" alt="home">
+                  </div>
+                </a>
+              </div>
+
+              <div id="nav-more" class="column small-4 medium-2 navbar__nav navblock">
+                <a href="/more-info">
+                  <div class="nav-pic">
+                    <img src="{{ theme:img src='nav_more_icon.png' }}" alt="home">
+                  </div>
+                  <div class="navblock__sub hide">
+                    <img src="{{ theme:img src='nav_more_icon_hover.png' }}" alt="more-info">
+                  </div>
+                </a>
+              </div>
+
+              <div id="nav-contact" class="column small-4 medium-2 navbar__nav navblock">
+                <a href="/contact">
+                  <div class="nav-pic">
+                    <img src="{{ theme:img src='nav_contact.png' }}" alt="home">
+                  </div>
+                  <div class="navblock__sub hide">
+                    <img src="{{ theme:img src='nav_contact_icon_hover.png' }}" alt="contact">
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </nav>
+        </div>
+      </div>  
+
+      {{ layout_content }}
+
+      <footer class="site-footer">
+        <div class="row">
+          
+          <div id="address" class="column small-12 medium-4 small-only-text-center">          
+            <h3>Contact Us</h3>
+            <ul class="vcard">
+              <li class="fn">Center for Minimally Invasive Surgery in Utah</li>
+              <li class="street-address">123 Colonial Ave.</li>
+              <li class="locality">Caprica City</li>
+              <li><span class="state">Utah</span>, <span class="zip">12345</span></li>            
+              <li class="email">Email: info@example.com</li>
+              <li class="phone">Phone: 888.888.8888</li>
+            </ul>
+          </div>
+
+          <div id="contact" class="column small-12 medium-4 text-center">
+            <a href="https://www.google.com/maps/search/Jordan+Valley+Medical+Center+Utah/@40.589378,-111.9750815,17z/" target="blank">
+              <h3 class="map">Map and Directions</h3>
+              <img src="{{ theme:img src='map.png' }}" alt="map">
+            </a>
+          </div>
+
+          <div id="site-map" class="column small-12 medium-4 text-right small-only-text-center">
+            <h3>Site Map</h3>
+            <ul class="no-bullet">
+              <li><a href="/">Home</a></li>
+              <li><a href="/more-info">More Info</a></li>
+              <li><a href="/more-info/less-pain">Less Pain</a></li>
+              <li><a href="/more-info/less-scarring">Less Scarring</a></li>              
+              <li><a href="/more-info/quicker-recovery">Quicker Recovery</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="column small-12">
+            <p class="text-center">
+              <small>&copy; 
+              <?php
+              $this_year = date("o");
+              if ($this_year == 2014)
+                echo $this_year . " ";
+              else
+                echo " 2014 - " . $this_year . " ";
+              ?>
+            Pinfinity Consulting LLC</small></p>
+          </div>
+        </div>
+      </footer>
+
+      <div id="download" class="reveal-modal" data-reveal>
+        <h2>Minimally Invasive Surgery means less pain, less scarring, and quicker recovery!</h2>
+        <div class="clearfix">
+          <img src="/assets/img/packet-image.jpg" alt="packet image" class="right" style="max-height:34%">
+          <p>Explainer: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora magni veritatis sed porro sequi illum! Hic soluta odio voluptatibus facere exercitationem nihil nesciunt, nisi, illum unde, voluptas doloribus eum cupiditate.</p>
+        </div>
+        
+        <br>
+       
+        <form class="clear" data-abide>
+        <div class="first-name-field">
+          <label>First name <small>required</small>
+             <input type="text" id="first-name" required placeholder="First name">
+          </label>
+          <small class="error">First name is required.</small>
+        </div>
+
+        <div class="last-name-field">
+          <label>Last name <small>required</small>
+             <input type="text" id="last-name" required placeholder="Last name">
+          </label>
+          <small class="error">Last name is required.</small>
+        </div>
+        <div class="email-field">
+          <label>Email <small>required</small>
+            <input type="email" id="email" required placeholder="Email">
+          </label>
+          <small class="error">An email address is required.</small>
+        </div>
+        <button type="submit" onclick="SendInfo()">Submit</button>
+      </form>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
+
+      
+
+    </div>
+
+          
+
+    <script src="/{{ theme_path }}js/jquery.min.js"></script>
+    <script src="/{{ theme_path }}js/foundation.min.js"></script>
+    <script src="{{ theme:js }}"></script>
+    <script type="text/javascript">
+      function SendInfo() {
+        var first = $("#first-name").val();
+        var last = $("#last-name").val();
+        var email = $("#email").val();
+
+        alert("Hello!  This script is on the bottom of the default layout. \n \n var first == " + first + "\nvar last == " + last + "\nvar email == " + email);
+      }
+    </script>
+    
+  </body>
+</html>

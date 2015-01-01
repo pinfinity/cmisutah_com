@@ -1,0 +1,502 @@
+/******************
+     Page
+******************/
+*:hover {
+	transition: all 0.1s ease;
+}
+
+.container {      
+      box-shadow: 0 0 20px #999;
+      margin: 0 auto;
+      max-width: 960px;
+}
+
+/******************
+     Colors
+===================
+$body-bg: #fff;
+// $body-font-color: #222;
+
+Nav Blue:  #3FABAE
+Nav Green:  #74A875
+Nav Yellow:  #FDBD13
+Nav Light Blue:  #8CCDCE
+Nav Light Green:  #ACCBAC
+Nav Light Yellow:  #FED771
+
+CTA Grey bkg:  #E6E7E8
+
+Less Pain bkg:  #3FABAE
+Less Scarring bkg:  #65BCBE
+Quicker Recovery Bkg:  #8CCDCE
+
+button bkg: #404041
+
+footer bkg:  same as button bkg? - yes, #404041
+
+button text same as Nav yellow?  yes, #FDBD13
+blue Text Same as Nav blue?  yes, #3FABAE
+
+******************/
+$utah-blue: #3FABAE;
+$utah-green:  #74A875;
+$utah-yellow:  #FDBD13;
+$utah-lt-blue:  #8CCDCE;
+$utah-lt-green:  #ACCBAC;
+$utah-lt-yellow:  #FED771;
+
+$utah-grey:  #E6E7E8;
+$utah-dark:  #404041;
+
+$utah-scarring:  #65BCBE;
+
+/******************
+     Header
+******************/
+#nav-home {
+	background: $utah-blue;
+
+	&:hover {
+		background: $utah-lt-blue;
+	}
+}
+
+#nav-more {
+	background: $utah-green;
+
+	&:hover {
+		background: $utah-lt-green;
+	}
+}
+
+#nav-contact {
+	background: $utah-yellow;
+
+	&:hover {
+		background: $utah-lt-yellow;
+	}
+}
+
+.nav-pic {
+	text-align: center;
+	margin: 2rem auto;
+}
+.medium-6 {
+	min-height: 1em;
+}
+
+nav {
+	>div:first-of-type {
+		padding: 0;
+	}
+	div.column {
+		// min-width:70px;
+		// min-height:90px;
+	}
+
+	color: #fff;
+
+	.fa {
+		font-size: 50px;
+		color: #fff;
+	}
+
+	small {
+		font-size: 1rem;
+		color: #fff;
+	}
+}
+.navbar {
+	padding-bottom: 3rem;
+}
+[id^="nav"] {
+	border: 0 solid white;
+	border-left-width: .33em; 
+	padding: 0;
+	
+	a {
+		display: inline-block;
+		height: 100%;
+		@extend .column;
+	}
+
+	.navblock__sub {
+		margin: 2rem auto;
+	}
+}
+
+[id^="nav"]:hover .nav-pic {
+	display: none;
+}
+
+[id^="nav"]:hover .navblock__sub {
+	display: inline-block;
+}
+/* firefox nav fix */
+.navblock__sub {
+	max-width:100%;
+}
+
+/*=== Read More Arrow ===*/
+span.readmore {
+	top: 0 !important;
+	font-size: .6rem;
+}
+span.readmore:before {
+	content: "\25B6";
+}
+
+/******************
+     Partials
+******************/
+
+/*=== CTA ===*/
+#cta-img {
+	background-image: url("../img/helping.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20em;
+}
+#cta-text{
+	background: $utah-grey;
+	padding: 3.75em 1em 3.75em 3em;
+
+	h2 {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+
+	h3 {
+		font-weight: 600;
+		font-style: italic;
+		color: $utah-blue;
+	}
+}
+#cta-text .foundation-button:after {
+	content: url("../img/cta_arrow.png");
+	position: absolute;
+	top: -.2em;
+	left: 9.5em;
+	overflow: hidden;
+
+}
+
+.foundation-button {
+	@extend .button;
+	background-color: $utah-dark;
+	border-color: $utah-dark;
+	color: $utah-yellow;
+	font-size: 1.5rem;
+
+}
+
+/*=== tagline ===*/
+#tagline {
+	padding: 2.2rem 1rem;
+	text-align: center;
+	 h2 {
+	 	font-weight: 300;
+	 	font-size: 2rem;
+	 }
+}
+
+/*=== reasons ===*/
+#reason-pain {
+	background-color: $utah-blue;
+	.reason-icon {
+		background-image: url("../img/less_pain_icon.png");
+	}
+}
+#reason-scarring {
+	background-color: $utah-scarring;
+	.reason-icon {
+		background-image: url("../img/less_scarring_icon.png");
+	}
+}
+#reason-recovery {
+	background-color: $utah-lt-blue;
+	.reason-icon {
+		background-image: url("../img/quick_recovery_icon.png");
+	}
+}
+.reason-icon {
+	background-position: center;
+	background-repeat:no-repeat;
+	background-position:center;
+	margin: 1em 0;
+	min-height: 147px; 
+}
+.reason-row{
+	background: $utah-scarring;
+}
+[id^="reason"] {
+	text-align: center;
+	a {		
+		color: white;
+		display: inline-block;
+		font-size: 1.3em;
+		margin: 1em 0 2.75rem;
+
+		&:hover {
+			color: #eee;			
+			transform: skewX(-20deg);
+			-ms-transform:skewX(-20deg);
+			-webkit-transform:skewX(-20deg);
+		}
+	}
+	h2 {
+		color: $body-font-color;
+		font-weight: 300;
+	}
+	p {
+		font-size: .875rem;
+		padding: 0 2em;
+	}
+}
+
+/*=== cta2 ===*/
+#cta2 {	
+	padding: 2.4rem 1rem;
+	text-align: center;
+	h3 {
+		color: $utah-blue;
+		font-weight: 600;
+		font-size:2rem;
+		font-style: italic;
+		margin: 1em;
+	}
+}
+
+/*=== sidebar ===*/
+.sidebar {
+	
+	p {
+		font-size: .825rem;
+		font-weight: 300;
+		margin-bottom: 1.5rem;
+	}
+	.button {
+		font-size: .85rem;
+	}
+}
+
+#side-browse {
+	background-color: lighten($utah-grey, 5%);
+	a {
+		display: block;
+		margin: -1.25rem;
+		padding: 1.25rem;		
+		background-color: $utah-grey;
+		&:hover {
+			background-color: darken($utah-grey, 10%);
+		}
+	}
+}
+#side-learn {
+	background-color: $utah-lt-blue;
+	border-width: 0px
+}
+[id^="side"] p {
+	font-size: 1rem;
+}
+/*=== article listing ===*/
+
+.stub {
+	background-color: lighten($utah-grey, 5%);
+	border-bottom: .5em solid white;
+	padding: .825em .825em 0;
+	overflow: hidden;
+	
+	a {
+		color:#000;
+		&:hover{
+			color:#000;
+		}
+	}
+	img {
+		border-radius: 100%;
+		max-width:7.5rem;
+		min-width:7.45rem;
+		position: relative;
+		left: .825rem;
+	}
+	.band {		
+		background-color: $utah-grey;		
+		display:block;
+		margin-top: .5rem;
+		padding: 1.25rem 0;
+
+		span{
+			position: relative;
+			top: -.5rem;
+		}
+	}
+}
+.stub:hover {
+	background-color: $utah-lt-blue;
+	.band {	
+		background-color: $utah-blue;
+		span {
+			color: white;
+		}
+		:hover {
+			color: $utah-grey;
+		}
+	}
+}
+.f-dropdown {
+	text-align: left;
+}
+.art-thumb {
+	border-radius: 100%;
+	height: 7rem;
+	width: 7rem;
+	position: relative;
+	left: .825rem;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.listing>div.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/*=== article listing ===*/
+.pagination {
+	margin: 2rem 0;
+
+}
+.pagination .button{
+	background-color: $utah-grey;
+	color: $utah-blue;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left:0;
+	padding-right: 0;
+	min-width: 2.5em;
+	&:hover {
+		background-color: $utah-blue;
+		color: white;
+	}
+	&.disabled {
+		background-color: lighten($utah-grey, 5%);
+		color: $utah-lt-blue;
+		&:hover {
+			background-color: lighten($utah-grey, 5%);
+			color: $utah-lt-blue;
+		}
+	}
+}
+.cat-link {
+	margin-left: 16px;
+	margin-top: 2em;
+	font-weight: 300;
+	&:first-of-type {
+		margin-top: 0;
+	}
+	&:hover {
+		transform: skewX(-20deg);
+		-ms-transform: skewX(-20deg);
+		-webkit-transform: skewX(-20deg);
+	}
+}
+.utah-drop, .utah-drop:hover {
+	@extend .dropdown;
+	border: 1px solid $utah-grey;
+	background: #fff;
+	color: $utah-blue;
+}
+.dropdown.button:after, button.dropdown:after {
+	border-color: $utah-blue transparent transparent transparent;
+}
+/******************
+     Content
+******************/
+main {
+	margin-right:1rem;
+}
+
+/******************
+     Footer
+******************/
+footer {
+	background: $utah-dark;
+	padding-top:1.5rem;
+}
+footer{	
+	color: white;
+	text-shadow: 1px 1px 0 #000;
+}
+footer a {	
+	color: $utah-blue;
+	text-shadow: none;
+}
+footer h3{
+	color: #fff;
+}
+.vcard {
+	border: none;
+	padding: 0;
+}
+
+/******************
+     Responsive styles
+******************/
+
+@media only screen and (max-width: 22em) {
+	#cta-img {
+		display:none;	
+	}
+
+} 
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	.navbar {
+		padding-bottom: .66rem;
+	}
+	[id^="nav"]:nth-child(2) {
+		border: 0 solid white;
+	}
+	#cta-text {
+		padding: .3em;
+	}
+	.art-thumb {
+		height: auto !important;
+		width: auto !important;
+		position: relative;
+		left: 0;
+		padding-top:100%;
+	}
+	#cta-text .foundation-button:after {
+		max-width:16%;
+	}
+	footer .small-12 {
+		margin-bottom: 3rem;
+	}
+} 
+
+/* only large screens */
+@media only screen and (min-width: 40.025em) {
+	.sidebar {
+		padding-right: 0;
+		padding-left:.5rem;
+	}
+	.listing :nth-child(odd){
+		border-left: 0 solid white !important;
+	}	
+	.stub {
+		border-left: .5em solid white;
+	}
+
+}
+
+@media only screen and (max-width:56em) {
+	.art-thumb {
+		height: 5rem;
+		width: 5rem;
+		position: relative;
+		left: 0;
+	}
+}
+

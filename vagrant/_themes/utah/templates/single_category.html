@@ -1,0 +1,76 @@
+{{ theme:partial src="tagline" }}
+
+{{ theme:partial src="nav_dropdown"}}
+
+<div class="row listing">
+
+	{{ entries:listing folder="{current_url}" limit="8"}}
+		{{ if  count|%:2 }}
+			<div class="row" data-equalizer>
+		{{ endif }}
+	<div class="stub column small-12 medium-6">
+		<a href="{{ url }}">
+			<div class="row">
+				<div class="column small-4">
+					<div class="art-thumb"
+					style= 
+					{{ if article_thumbnail }}
+						"background:url({{ article_thumbnail }});"
+					{{ else }}
+						"background:url({{ theme:img src='touch_icon.png' }});"
+					{{ endif }}
+					></div>
+					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
+				</div>
+
+				<div class="column small-8" data-equalizer-watch>
+					<h5>{{title}}</h5>
+					{{ content|striptags|truncate:50 }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="band">
+					<div class="column small-4">
+						&nbsp;
+					</div>
+
+					<div class="column small-8">				
+						<span>Read More&nbsp;<span class="readmore"></span></span>
+					</div>
+				</div>
+			</div>
+		</a>		
+	</div>
+
+	{{ if last }}
+		{{ if total_results|%:2 }}
+		<div class="column small-12 medium-6"> </div>
+		{{ endif }}
+	{{ endif}}
+
+	{{ if  !(count|%:2)  || (last && total_results|%:2) }}
+		</div>
+	{{ endif }}
+
+	{{ /entries:listing}}
+	
+</div>
+
+<div class="pagination row text-right small-only-text-center">
+{{ entries:pagination limit="8"}}
+	<div class="column small-12 medium-5 medium-offset-7">
+	{{ if total_pages > 1}}
+	    {{ loop times="{ total_pages }" }}
+	        {{ if index == current_page }}
+	            <a class="button disabled">{{ index }}</a>
+	        {{ else }}
+	        	<a class="button" href="{{ url }}?page={{ index }}">{{ index }}</a>
+	        {{ endif }}
+	    {{ /loop }}
+    {{ endif }}
+    </div>
+
+{{ /entries:pagination }}
+</div>
+
+

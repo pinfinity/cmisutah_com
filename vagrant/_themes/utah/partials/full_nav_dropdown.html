@@ -1,0 +1,8 @@
+<div class="row text-center">
+	<a href="#" data-dropdown="drop1" class="button dropdown utah-drop">Table of Contents</a><br>
+	<ul id="drop1" data-dropdown-content class="f-dropdown">
+		{{ nav max_depth="2" from="/more-info" folders_only="true"}}
+			<li><a href="{{ url }}">{{ title }}</a></li>
+		{{ /nav }}
+	</ul>
+</div>
