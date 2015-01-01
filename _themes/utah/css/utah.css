@@ -5935,6 +5935,12 @@ footer h3 {
   display: none; }
 
 /******************
+     Contact Page
+******************/
+#locations a {
+  display: block; }
+
+/******************
      Responsive styles
 ******************/
 @media only screen and (max-width: 22em) {

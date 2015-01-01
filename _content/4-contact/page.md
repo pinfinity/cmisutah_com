@@ -22,7 +22,7 @@ _template: contact
 <div class="row" id="locations">
 	<div class="column small-12 medium-6">
 		<ul class="vcard">
-			<li class="fn">The Utah Center for Minimally Invasive Surgery</li>	 
+			<li class="fn">Specialty Surgery of Utah</li>	 
 			<li class="street-address">3584 W. 9000 S., Suite 304</li>
 			<li><span class="locality">West Jordan, </span><span class="state">UT </span><span class="zip">84088</span></li>
 		</ul>
@@ -31,7 +31,7 @@ _template: contact
 	</div>
 	<div class="column small-12 medium-6">
 		<ul class="vcard">
-			<li class="fn">The Utah Center for Minimally Invasive Surgery</li>	 
+			<li class="fn">Specialty Surgery of Utah</li>	 
 			<li class="street-address">3336 S. 4155 West, Suite 306</li>
 			<li><span class="locality">West Valley City, </span><span class="state">UT  </span><span class="zip">84120</span></li>
 		</ul>
