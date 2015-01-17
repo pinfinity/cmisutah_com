@@ -1,225 +1,64 @@
 {{ theme:partial src="tagline" }}
 
-<h2 class="cat-link"><a href="/more-info/less-pain">Less Pain</a></h2>
-<div class="row listing">
-	{{ entries:listing folder="{current_url}/less-pain" limit="4"}}
-		{{ if  count|%:2 }}
-			<div class="row" data-equalizer data-modulo-2 >
-		{{ endif }}
-		<div class="stub column small-12 medium-6" >
-			<a href="{{ url }}">
-				<div class="row">
-					<div class="column small-4">
-						<div class="art-thumb"
-						style= 
-						{{ if article_thumbnail }}
-							"background:url({{ article_thumbnail }});"
-						{{ else }}
-							"background:url({{ theme:img src='touch_icon.png' }});"
-						{{ endif }}
-						></div> <!-- / art-thimb -->
-						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-					</div> <!-- /column small-4 -->
 
-					<div class="column small-8" data-equalizer-watch>
-						<h5>{{title}}</h5>
-						{{ content|striptags|truncate:75 }}
-					</div>
-				</div> <!-- /row -->
+{{ nav max_depth="2" from="/more-info" folders_only="true"}}
 
-				<div class="row">
-					<div class="band" href="{{ url }}">
+	<h2 class="cat-link"><a href="{{ url }}">{{ title }}</a></h2>
+	<div class="row listing">
+		{{ entries:listing folder="{ url }" limit="4"}}
+			{{ if  count|%:2 }}
+				<div class="row" data-equalizer data-modulo-2 >
+			{{ endif }}
+			<div class="stub column small-12 medium-6" >
+				<a href="{{ url }}">
+					<div class="row">
 						<div class="column small-4">
-							&nbsp;
-						</div>
+							<div class="art-thumb"
+							style= 
+							{{ if article_thumbnail }}
+								"background:url({{ article_thumbnail }});"
+							{{ else }}
+								"background:url({{ theme:img src='touch_icon.png' }});"
+							{{ endif }}
+							></div> <!-- / art-thumb -->
+							<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
+						</div> <!-- /column small-4 -->
 
-						<div class="column small-8">				
-							<span>Read More&nbsp;<span class="readmore"></span></span>
+						<div class="column small-8" data-equalizer-watch>
+							<h5>{{title}}</h5>
+							{{ content|striptags|truncate:75 }}
 						</div>
-					</div>
-				</div>	
-			</a>	
-		</div>
-		{{ if last }}
-			{{ if total_results|%:2 }}
-			<div class="column small-12 medium-6"> </div>
-		</div> 
-		<!-- ending data-equalizer (odd results) -->
-			{{ endif }}		
-		{{ endif}}
+					</div> <!-- /row -->
 
-		{{ if !(count|%:2) }}
+					<div class="row">
+						<div class="band" href="{{ url }}">
+							<div class="column small-4">
+								&nbsp;
+							</div>
+
+							<div class="column small-8">				
+								<span>Read More&nbsp;<span class="readmore"></span></span>
+							</div>
+						</div>
+					</div>	
+				</a>	
+			</div>
+			{{ if last }}
+				{{ if total_results|%:2 }}
+				<div class="column small-12 medium-6"> </div>
 			</div> 
-			<!-- ending data equilizer (even results) -->
-		{{ endif }}	
-	{{ /entries:listing}}
-</div>
+			<!-- ending data-equalizer (odd results) -->
+				{{ endif }}		
+			{{ endif}}
 
+			{{ if !(count|%:2) }}
+				</div> 
+				<!-- ending data equilizer (even results) -->
+			{{ endif }}	
+		{{ /entries:listing}}
+	</div>
 
-<h2 class="cat-link"><a href="/more-info/less-scarring">Less Scarring</a></h2>
-<div class="row listing">
-	{{ entries:listing folder="{current_url}/less-scarring" limit="4"}}
-		{{ if  count|%:2 }}
-			<div class="row" data-equalizer>
-		{{ endif }}
-		<div class="stub column small-12 medium-6">
-			<a href="{{ url }}">
-				<div class="row">
-					<div class="column small-4">
-						<div class="art-thumb"
-						style= 
-						{{ if article_thumbnail }}
-							"background:url({{ article_thumbnail }});"
-						{{ else }}
-							"background:url({{ theme:img src='touch_icon.png' }});"
-						{{ endif }}
-						></div>
-						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-					</div>
-
-					<div class="column small-8" data-equalizer-watch>
-						<h5>{{title}}</h5>
-						{{ content|striptags|truncate:75 }}
-					</div>
-				</div>
-				<div class="row">
-					<div class="band" href="{{ url }}">
-						<div class="column small-4">
-							&nbsp;
-						</div>
-
-						<div class="column small-8">				
-							<span>Read More&nbsp;<span class="readmore"></span></span>
-						</div>
-					</div>
-				</div>	
-			</a>		
-		</div>
-		{{ if last }}
-			{{ if total_results|%:2 }}
-			<div class="column small-12 medium-6"> </div>
-		</div> 
-		<!-- ending data-equalizer (odd results) -->
-			{{ endif }}		
-		{{ endif}}
-
-		{{ if !(count|%:2) }}
-			</div> 
-			<!-- ending data equilizer (even results) -->
-		{{ endif }}	
-	{{ /entries:listing}}
-</div>
-
-
-<h2 class="cat-link"><a href="/more-info/quicker-recovery">Quicker Recovery</a></h2>	
-<div class="row listing">
-	{{ entries:listing folder="{current_url}/quicker-recovery" limit="4"}}
-		{{ if  count|%:2 }}
-			<div class="row" data-equalizer>
-		{{ endif }}
-		<div class="stub column small-12 medium-6">
-			<a href="{{ url }}">
-				<div class="row">
-					<div class="column small-4">
-						<div class="art-thumb"
-						style= 
-						{{ if article_thumbnail }}
-							"background:url({{ article_thumbnail }});"
-						{{ else }}
-							"background:url({{ theme:img src='touch_icon.png' }});"
-						{{ endif }}
-						></div>
-						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-					</div>
-
-					<div class="column small-8" data-equalizer-watch>
-						<h5>{{title}}</h5>
-						{{ content|striptags|truncate:75 }}
-					</div>
-				</div>
-				<div class="row">
-					<div class="band" href="{{ url }}">
-						<div class="column small-4">
-							&nbsp;
-						</div>
-
-						<div class="column small-8">				
-							<span>Read More&nbsp;<span class="readmore"></span></span>
-						</div>
-					</div>
-				</div>	
-			</a>		
-		</div>
-		{{ if last }}
-			{{ if total_results|%:2 }}
-			<div class="column small-12 medium-6"> </div>
-		</div> 
-		<!-- ending data-equalizer (odd results) -->
-			{{ endif }}		
-		{{ endif}}
-
-		{{ if !(count|%:2) }}
-			</div> 
-			<!-- ending data equilizer (even results) -->
-		{{ endif }}	
-	{{ /entries:listing}}
-</div>
-
-
-<h2 class="cat-link"><a href="/more-info/quicker-recovery">Gallbladder</a></h2>	
-<div class="row listing">
-	{{ entries:listing folder="{current_url}/gallbladder" limit="4"}}
-		{{ if  count|%:2 }}
-			<div class="row" data-equalizer>
-		{{ endif }}
-		<div class="stub column small-12 medium-6">
-			<a href="{{ url }}">
-				<div class="row">
-					<div class="column small-4">
-						<div class="art-thumb"
-						style= 
-						{{ if article_thumbnail }}
-							"background:url({{ article_thumbnail }});"
-						{{ else }}
-							"background:url({{ theme:img src='touch_icon.png' }});"
-						{{ endif }}
-						></div>
-						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-					</div>
-
-					<div class="column small-8" data-equalizer-watch>
-						<h5>{{title}}</h5>
-						{{ content|striptags|truncate:75 }}
-					</div>
-				</div>
-				<div class="row">
-					<div class="band" href="{{ url }}">
-						<div class="column small-4">
-							&nbsp;
-						</div>
-
-						<div class="column small-8">				
-							<span>Read More&nbsp;<span class="readmore"></span></span>
-						</div>
-					</div>
-				</div>	
-			</a>		
-		</div>
-
-		{{ if last }}
-			{{ if total_results|%:2 }}
-			<div class="column small-12 medium-6"> </div>
-		</div> 
-		<!-- ending data-equalizer (odd results) -->
-			{{ endif }}		
-		{{ endif}}
-
-		{{ if !(count|%:2) }}
-			</div> 
-			<!-- ending data equilizer (even results) -->
-		{{ endif }}	
-	{{ /entries:listing}}
-</div>
+{{ /nav }}
 
 {{ theme:partial src="cta2" }}
 
