@@ -6,48 +6,52 @@
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer data-modulo-2 >
 		{{ endif }}
-	<div class="stub column small-12 medium-6" >
-		<a href="{{ url }}">
-			<div class="row">
-				<div class="column small-4">
-					<div class="art-thumb"
-					style= 
-					{{ if article_thumbnail }}
-						"background:url({{ article_thumbnail }});"
-					{{ else }}
-						"background:url({{ theme:img src='touch_icon.png' }});"
-					{{ endif }}
-					></div> <!-- / art-thimb -->
-					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-				</div> <!-- /column small-4 -->
-
-				<div class="column small-8" data-equalizer-watch>
-					<h5>{{title}}</h5>
-					{{ content|striptags|truncate:75 }}
-				</div>
-			</div> <!-- /row -->
-			<div class="row">
-				<div class="band" href="{{ url }}">
+		<div class="stub column small-12 medium-6" >
+			<a href="{{ url }}">
+				<div class="row">
 					<div class="column small-4">
-						&nbsp;
-					</div>
+						<div class="art-thumb"
+						style= 
+						{{ if article_thumbnail }}
+							"background:url({{ article_thumbnail }});"
+						{{ else }}
+							"background:url({{ theme:img src='touch_icon.png' }});"
+						{{ endif }}
+						></div> <!-- / art-thimb -->
+						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
+					</div> <!-- /column small-4 -->
 
-					<div class="column small-8">				
-						<span>Read More&nbsp;<span class="readmore"></span></span>
+					<div class="column small-8" data-equalizer-watch>
+						<h5>{{title}}</h5>
+						{{ content|striptags|truncate:75 }}
 					</div>
-				</div>
-			</div>	
-		</a>	
-	</div>
+				</div> <!-- /row -->
+
+				<div class="row">
+					<div class="band" href="{{ url }}">
+						<div class="column small-4">
+							&nbsp;
+						</div>
+
+						<div class="column small-8">				
+							<span>Read More&nbsp;<span class="readmore"></span></span>
+						</div>
+					</div>
+				</div>	
+			</a>	
+		</div>
 		{{ if last }}
-			{{ if total_results|%:2  }}
-			<div class="column small-12 medium-6"> </div> 
-			{{ endif }}
+			{{ if total_results|%:2 }}
+			<div class="column small-12 medium-6"> </div>
+		</div> 
+		<!-- ending data-equalizer (odd results) -->
+			{{ endif }}		
 		{{ endif}}
 
-		{{ if  !(count|%:2) || total_results == 1 }}
-			</div>
-		{{ endif }}		
+		{{ if !(count|%:2) }}
+			</div> 
+			<!-- ending data equilizer (even results) -->
+		{{ endif }}	
 	{{ /entries:listing}}
 </div>
 
@@ -58,47 +62,50 @@
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer>
 		{{ endif }}
-	<div class="stub column small-12 medium-6">
-		<a href="{{ url }}">
-			<div class="row">
-				<div class="column small-4">
-					<div class="art-thumb"
-					style= 
-					{{ if article_thumbnail }}
-						"background:url({{ article_thumbnail }});"
-					{{ else }}
-						"background:url({{ theme:img src='touch_icon.png' }});"
-					{{ endif }}
-					></div>
-					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-				</div>
-
-				<div class="column small-8" data-equalizer-watch>
-					<h5>{{title}}</h5>
-					{{ content|striptags|truncate:75 }}
-				</div>
-			</div>
-			<div class="row">
-				<div class="band" href="{{ url }}">
+		<div class="stub column small-12 medium-6">
+			<a href="{{ url }}">
+				<div class="row">
 					<div class="column small-4">
-						&nbsp;
+						<div class="art-thumb"
+						style= 
+						{{ if article_thumbnail }}
+							"background:url({{ article_thumbnail }});"
+						{{ else }}
+							"background:url({{ theme:img src='touch_icon.png' }});"
+						{{ endif }}
+						></div>
+						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 					</div>
 
-					<div class="column small-8">				
-						<span>Read More&nbsp;<span class="readmore"></span></span>
+					<div class="column small-8" data-equalizer-watch>
+						<h5>{{title}}</h5>
+						{{ content|striptags|truncate:75 }}
 					</div>
 				</div>
-			</div>	
-		</a>		
-	</div>
+				<div class="row">
+					<div class="band" href="{{ url }}">
+						<div class="column small-4">
+							&nbsp;
+						</div>
+
+						<div class="column small-8">				
+							<span>Read More&nbsp;<span class="readmore"></span></span>
+						</div>
+					</div>
+				</div>	
+			</a>		
+		</div>
 		{{ if last }}
 			{{ if total_results|%:2 }}
 			<div class="column small-12 medium-6"> </div>
-			{{ endif }}
+		</div> 
+		<!-- ending data-equalizer (odd results) -->
+			{{ endif }}		
 		{{ endif}}
 
-		{{ if  !(count|%:2) || total_results == 1 }}
-			</div>
+		{{ if !(count|%:2) }}
+			</div> 
+			<!-- ending data equilizer (even results) -->
 		{{ endif }}	
 	{{ /entries:listing}}
 </div>
@@ -110,47 +117,50 @@
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer>
 		{{ endif }}
-	<div class="stub column small-12 medium-6">
-		<a href="{{ url }}">
-			<div class="row">
-				<div class="column small-4">
-					<div class="art-thumb"
-					style= 
-					{{ if article_thumbnail }}
-						"background:url({{ article_thumbnail }});"
-					{{ else }}
-						"background:url({{ theme:img src='touch_icon.png' }});"
-					{{ endif }}
-					></div>
-					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-				</div>
-
-				<div class="column small-8" data-equalizer-watch>
-					<h5>{{title}}</h5>
-					{{ content|striptags|truncate:75 }}
-				</div>
-			</div>
-			<div class="row">
-				<div class="band" href="{{ url }}">
+		<div class="stub column small-12 medium-6">
+			<a href="{{ url }}">
+				<div class="row">
 					<div class="column small-4">
-						&nbsp;
+						<div class="art-thumb"
+						style= 
+						{{ if article_thumbnail }}
+							"background:url({{ article_thumbnail }});"
+						{{ else }}
+							"background:url({{ theme:img src='touch_icon.png' }});"
+						{{ endif }}
+						></div>
+						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 					</div>
 
-					<div class="column small-8">				
-						<span>Read More&nbsp;<span class="readmore"></span></span>
+					<div class="column small-8" data-equalizer-watch>
+						<h5>{{title}}</h5>
+						{{ content|striptags|truncate:75 }}
 					</div>
 				</div>
-			</div>	
-		</a>		
-	</div>
+				<div class="row">
+					<div class="band" href="{{ url }}">
+						<div class="column small-4">
+							&nbsp;
+						</div>
+
+						<div class="column small-8">				
+							<span>Read More&nbsp;<span class="readmore"></span></span>
+						</div>
+					</div>
+				</div>	
+			</a>		
+		</div>
 		{{ if last }}
 			{{ if total_results|%:2 }}
 			<div class="column small-12 medium-6"> </div>
-			{{ endif }}
+		</div> 
+		<!-- ending data-equalizer (odd results) -->
+			{{ endif }}		
 		{{ endif}}
 
-		{{ if  !(count|%:2) || total_results == 1}}
-			</div>
+		{{ if !(count|%:2) }}
+			</div> 
+			<!-- ending data equilizer (even results) -->
 		{{ endif }}	
 	{{ /entries:listing}}
 </div>
@@ -162,48 +172,54 @@
 		{{ if  count|%:2 }}
 			<div class="row" data-equalizer>
 		{{ endif }}
-	<div class="stub column small-12 medium-6">
-		<a href="{{ url }}">
-			<div class="row">
-				<div class="column small-4">
-					<div class="art-thumb"
-					style= 
-					{{ if article_thumbnail }}
-						"background:url({{ article_thumbnail }});"
-					{{ else }}
-						"background:url({{ theme:img src='touch_icon.png' }});"
-					{{ endif }}
-					></div>
-					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-				</div>
-
-				<div class="column small-8" data-equalizer-watch>
-					<h5>{{title}}</h5>
-					{{ content|striptags|truncate:75 }}
-				</div>
-			</div>
-			<div class="row">
-				<div class="band" href="{{ url }}">
+		<div class="stub column small-12 medium-6">
+			<a href="{{ url }}">
+				<div class="row">
 					<div class="column small-4">
-						&nbsp;
+						<div class="art-thumb"
+						style= 
+						{{ if article_thumbnail }}
+							"background:url({{ article_thumbnail }});"
+						{{ else }}
+							"background:url({{ theme:img src='touch_icon.png' }});"
+						{{ endif }}
+						></div>
+						<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 					</div>
 
-					<div class="column small-8">				
-						<span>Read More&nbsp;<span class="readmore"></span></span>
+					<div class="column small-8" data-equalizer-watch>
+						<h5>{{title}}</h5>
+						{{ content|striptags|truncate:75 }}
 					</div>
 				</div>
-			</div>	
-		</a>		
-	</div>
+				<div class="row">
+					<div class="band" href="{{ url }}">
+						<div class="column small-4">
+							&nbsp;
+						</div>
+
+						<div class="column small-8">				
+							<span>Read More&nbsp;<span class="readmore"></span></span>
+						</div>
+					</div>
+				</div>	
+			</a>		
+		</div>
+
 		{{ if last }}
 			{{ if total_results|%:2 }}
 			<div class="column small-12 medium-6"> </div>
-			{{ endif }}
+		</div> 
+		<!-- ending data-equalizer (odd results) -->
+			{{ endif }}		
 		{{ endif}}
 
-		{{ if  !(count|%:2) || total_results == 1}}
-			</div>
+		{{ if !(count|%:2) }}
+			</div> 
+			<!-- ending data equilizer (even results) -->
 		{{ endif }}	
 	{{ /entries:listing}}
 </div>
+
 {{ theme:partial src="cta2" }}
+
