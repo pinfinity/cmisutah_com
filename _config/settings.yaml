@@ -21,7 +21,7 @@ _language: en
 _site_root: /
 
 # Name of your site
-_site_name: Another Awesome Statamic Site
+_site_name: Utah Center for Minimially Invasive Surgery
 
 # Change the folder name for your content directory
 _content_root: _content
@@ -158,7 +158,7 @@ _admin_theme: ascent
 
 # Customize which pages show in the control panel
 _admin_nav:
-  dashboard: false
+  dashboard: true
   pages:     true
   members:   true
   account:   true
@@ -166,10 +166,10 @@ _admin_nav:
   logs:      true
   help:      true
   view_site: true
-  logout:    true
+  logout:    true 
 
 # When you log in, where would you like to start?
-_admin_start_page: pages
+_admin_start_page: dashboard
 
 # Enable/Disable the ability to add new top level pages via the CP
 _enable_add_top_level_page: true
@@ -181,7 +181,7 @@ _enable_add_child_page: true
 _enable_delete_page: true
 
 # plain english works just fine here.
-_cookies.lifetime: 1 minute
+_cookies.lifetime: 1 week
 
 # For advanced users only. Here be dragons.
 _cookies.cipher: MCRYPT_RIJNDAEL_256

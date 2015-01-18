@@ -19,3 +19,5 @@ fields:
     required: false
     default:
     type: hidden
+
+hide: true

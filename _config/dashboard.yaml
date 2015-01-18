@@ -1,6 +1,16 @@
+dashboard_subnav: >
+  <div id="subnav">
+	  <ul>
+			<li><a href="entries?path=3-more-info/04-gallbladder" class="active">Gallbladder</a></li>
+			<li><a href="entries?path=3-more-info/01-less-pain">Less Pain</a></li>
+			<li><a href="entries?path=3-more-info/02-less-scarring">Less Scarring</a></li>
+			<li><a href="entries?path=3-more-info/03-quicker-recovery">Quicker Recovery</a></li>
+		</ul>
+	\</div>
+
 dashboard_main_content: >
-  <h1>Replace this if you want to customize your dashboard's content</h1>
-  <p>Hello wilderness.</p>
+  <h1>Welcome to the Utah CMIS Dashboard</h1>
+  <p>Click on one of the four above areas to view and edit posts.</p>
 
 dashboard_sidebar_content: >
   <h2>Useful Links</h2>

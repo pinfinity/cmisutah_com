@@ -5941,6 +5941,12 @@ footer h3 {
   display: block; }
 
 /******************
+     Videos
+******************/
+.fluid-width-video-wrapper {
+  margin-bottom: 1.5em; }
+
+/******************
      Responsive styles
 ******************/
 @media only screen and (max-width: 22em) {

@@ -1,12 +1,17 @@
-title: Standard Post
+title: Video Post
 
 fields:
+video_link:
+    display: Video video_link
+
   article_thumbnail:
     display: Article Thumbnail
     type: file
     allowed: [png, gif, jpg, jpeg]
     instructions: This is the image that will be shown in article listings.  When displayed, this image will be 170px by 170px at its largest.
     destination: assets/img
+  
+
   categories:
     display: Categories
     required: false
