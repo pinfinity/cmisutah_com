@@ -5944,7 +5944,11 @@ footer h3 {
      Videos
 ******************/
 .fluid-width-video-wrapper {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  cursor: pointer; }
+
+[id^=fitvid] {
+  cursor: pointer; }
 
 /******************
      Responsive styles

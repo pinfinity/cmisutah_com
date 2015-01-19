@@ -5,10 +5,14 @@
 
 	<h2 class="cat-link"><a href="{{ url }}">{{ title }}</a></h2>
 	<div class="row listing">
-		{{ entries:listing folder="{ url }" limit="4"}}
+		{{ entries:listing folder="{ url }" limit="4" conditions="categories:video"}}
 			{{ if  count|%:2 }}
 				<div class="row" data-equalizer data-modulo-2 >
 			{{ endif }}
+
+			{{ if no_results }}
+				<div class="column small-12 medium-6 no-results"> </div>
+			{{ else }}
 			<div class="stub column small-12 medium-6" >
 				<a href="{{ url }}">
 					<div class="row">
@@ -45,6 +49,8 @@
 					</div>	
 				</a>	
 			</div>
+			{{ endif }}
+
 			{{ if last }}
 				{{ if total_results|%:2 }}
 				<div class="column small-12 medium-6"> </div>

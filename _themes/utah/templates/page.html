@@ -3,7 +3,14 @@
 		<h2>{{ title }}</h2>
 	</div>	
 	<div class="column small-12 medium-9">
-		<main>{{ content }}</main>
+		<main>
+			{{ content }}
+		
+		{{ if categories_sentence_list ~ "/(video)/"}}
+			<p><a href="/videos" class=""><u>See more videos</u></a> from the <br/>Utah Center for Minimially invasive Surgery.</p>
+		{{ endif }}
+
+		</main>
 	</div>
 
 	{{ theme:partial src="sidebar" }}
