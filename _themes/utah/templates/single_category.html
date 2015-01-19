@@ -16,6 +16,8 @@
 					style= 
 					{{ if article_thumbnail }}
 						"background:url({{ article_thumbnail }});"
+					{{ elseif categories_sentence_list ~ "/(video)/"}}
+					  "background:url( {{ theme:img src='play-blue.png' }});"
 					{{ else }}
 						"background:url({{ theme:img src='touch_icon.png' }});"
 					{{ endif }}
