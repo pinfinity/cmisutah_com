@@ -5,7 +5,7 @@
 
 	<h2 class="cat-link"><a href="{{ url }}">{{ title }}</a></h2>
 	<div class="row listing">
-		{{ entries:listing folder="{ url }" limit="4" conditions="categories:video"}}
+		{{ entries:listing folder="{ url }" conditions="categories:video"}}
 			{{ if  count|%:2 }}
 				<div class="row" data-equalizer data-modulo-2 >
 			{{ endif }}
