@@ -463,6 +463,44 @@ footer h3{
 [id^=fitvid] {
 	cursor: pointer;
 }
+/******************
+     Providers
+******************/
+
+.vert-center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vert-center-item {
+  max-width: 50%;
+}
+.prov-meet {
+	text-align: center;
+	margin: 1.5em;
+	font-style: oblique;
+}
+.prov-stub {
+	padding: .825em;
+	background: $utah-blue;
+	border: none;
+}
+.prov-div {
+	background: $utah-blue;
+	padding-bottom: 1.5em;
+}
+.listing .prov-stub {
+	border: none !important;
+}
+.prov-img {
+	float:left;
+	margin: 0 2em;
+}
+.prov ul{
+	list-syle: inside;
+}
+
 
 /******************
      Responsive styles

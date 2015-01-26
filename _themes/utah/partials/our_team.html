@@ -1,0 +1,49 @@
+<!-- providers -->
+<div class="row prov-div">
+	<div class="column  ">
+		<h2 class="prov-meet">Meet our team</h2>
+
+		<div class="row listing">
+
+	{{ entries:listing folder="providers"}}
+		{{ if  count|%:2 }}
+			<div class="row" data-equalizer>
+		{{ endif }}
+	<div class="stub prov-stub column small-12 medium-6">
+		<a href="{{ url }}">
+			<div class="row vert-center-container">
+				<div class="column small-4 avatar">
+					<div class="art-thumb"
+					style= 
+					{{ if article_thumbnail }}
+						"background:url({{ article_thumbnail }});"
+					{{ else }}
+						"background:url({{ theme:img src='touch_icon.png' }});"
+					{{ endif }}
+					></div>
+					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
+				</div>
+
+				<div class="column small-8 prov-name vert-center-item" data-equalizer-watch>
+					<h5>{{title}}</h5>
+				</div>
+			</div>
+			
+		</a>		
+	</div>
+
+	{{ if last }}
+		{{ if total_results|%:2 }}
+		<div class="column small-12 medium-6"> </div>
+		{{ endif }}
+	{{ endif}}
+
+	{{ if  !(count|%:2)  || (last && total_results|%:2) }}
+		</div>
+	{{ endif }}
+
+	{{ /entries:listing}}
+	
+</div>
+	</div>
+</div>

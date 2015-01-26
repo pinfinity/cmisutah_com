@@ -5951,6 +5951,41 @@ footer h3 {
   cursor: pointer; }
 
 /******************
+     Providers
+******************/
+.vert-center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.vert-center-item {
+  max-width: 50%; }
+
+.prov-meet {
+  text-align: center;
+  margin: 1.5em;
+  font-style: oblique; }
+
+.prov-stub {
+  padding: 0.825em;
+  background: #3fabae;
+  border: none; }
+
+.prov-div {
+  background: #3fabae;
+  padding-bottom: 1.5em; }
+
+.listing .prov-stub {
+  border: none !important; }
+
+.prov-img {
+  float: left;
+  margin: 0 2em; }
+
+.prov ul {
+  list-syle: inside; }
+
+/******************
      Responsive styles
 ******************/
 @media only screen and (max-width: 22em) {
