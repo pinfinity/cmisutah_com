@@ -2,48 +2,48 @@
 <div class="row prov-div">
 	<div class="column  ">
 		<h2 class="prov-meet">Meet our team</h2>
-
-		<div class="row listing">
+			<div class="row listing">
 
 	{{ entries:listing folder="providers"}}
-		{{ if  count|%:2 }}
-			<div class="row" data-equalizer>
-		{{ endif }}
-	<div class="stub prov-stub column small-12 medium-6">
-		<a href="{{ url }}">
-			<div class="row vert-center-container">
-				<div class="column small-4 avatar">
-					<div class="art-thumb"
-					style= 
-					{{ if article_thumbnail }}
-						"background:url({{ article_thumbnail }});"
-					{{ else }}
-						"background:url({{ theme:img src='touch_icon.png' }});"
-					{{ endif }}
-					></div>
-					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
-				</div>
 
-				<div class="column small-8 prov-name vert-center-item" data-equalizer-watch>
+		{{ if count|-:1|%:3 == 0 }}
+				<div class="row" data-equalizer>
+		{{ endif }}
+
+			<div class="stub prov-stub column small-12 medium-4 
+			{{ if last }}
+			 	 end
+		 	{{ endif }}
+		 	{{ if count == total_results|/:3|floor|*:3|+:1 }}
+		 		 {{ if total_results|%:3 == 1 }}
+		 		 	 medium-offset-4
+		 		 {{ elseif total_results|%:3 == 2 }}
+		 		     medium-offset-2
+		 		 {{ endif }}
+			{{ endif }}">
+				<a href="{{ url }}">
+					<div class=" avatar">
+						<div class="prov-thumb"
+						style= 
+						{{ if article_thumbnail }}
+							"background:url({{ article_thumbnail }});"
+						{{ else }}
+							"background:url({{ theme:img src='touch_icon.png' }});"
+						{{ endif }}
+						></div>
+							
+					</div>
+
 					<h5>{{title}}</h5>
-				</div>
+				</a>		
 			</div>
-			
-		</a>		
-	</div>
 
-	{{ if last }}
-		{{ if total_results|%:2 }}
-		<div class="column small-12 medium-6"> </div>
-		{{ endif }}
-	{{ endif}}
-
-	{{ if  !(count|%:2)  || (last && total_results|%:2) }}
-		</div>
+	{{ if count|%:3 == 0 || last}}
+			</div><!-- last -->
 	{{ endif }}
-
-	{{ /entries:listing}}
 	
-</div>
+	{{ /entries:listing}}		
+	
+		</div>
 	</div>
 </div>

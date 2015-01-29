@@ -5963,13 +5963,15 @@ footer h3 {
 
 .prov-meet {
   text-align: center;
-  margin: 1.5em;
+  margin: 1.5em 1.5em 0.5em;
   font-style: oblique; }
 
 .prov-stub {
   padding: 0.825em;
   background: #3fabae;
   border: none; }
+  .prov-stub a {
+    text-align: center; }
 
 .prov-div {
   background: #3fabae;
@@ -5984,6 +5986,15 @@ footer h3 {
 
 .prov ul {
   list-syle: inside; }
+
+.prov-thumb {
+  border-radius: 100%;
+  height: 7rem;
+  width: 7rem;
+  margin: 1rem auto;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center top; }
 
 /******************
      Responsive styles
