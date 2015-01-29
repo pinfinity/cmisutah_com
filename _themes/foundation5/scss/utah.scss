@@ -512,8 +512,23 @@ footer h3{
 	background-repeat: no-repeat;
 	background-position: center top;
 }
-
-
+/******************
+     Testimonial
+******************/
+.source {
+	text-align: right;
+	display: block;
+	font-size: 1.25em;
+	margin-right: 18%;
+}
+.quote {
+	text-size: 1.2rem;
+	margin:3px;
+}
+.testimonial {
+	padding: 2.2rem 1rem;
+	text-align: center;
+}
 
 /******************
      Responsive styles
