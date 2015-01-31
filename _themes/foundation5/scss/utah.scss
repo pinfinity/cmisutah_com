@@ -480,17 +480,18 @@ footer h3{
 	text-align: center;
 	margin: 1.5em 1.5em .5em;
 	font-style: oblique;
+	font-weight:700;
 }
 .prov-stub {
 	padding: .825em;
-	background: $utah-blue;
+	// background: $utah-blue;
 	border: none;
 	a {
 		text-align: center;
 	}
 }
 .prov-div {
-	background: $utah-blue;
+	// background: $utah-blue;
 	padding-bottom: 1.5em;
 }
 .listing .prov-stub {
@@ -526,7 +527,7 @@ footer h3{
 	margin:3px;
 }
 .testimonial {
-	padding: 2.2rem 1rem;
+	padding: 3.2rem 1rem;
 	text-align: center;
 }
 

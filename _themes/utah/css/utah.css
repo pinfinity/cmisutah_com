@@ -5964,17 +5964,16 @@ footer h3 {
 .prov-meet {
   text-align: center;
   margin: 1.5em 1.5em 0.5em;
-  font-style: oblique; }
+  font-style: oblique;
+  font-weight: 700; }
 
 .prov-stub {
   padding: 0.825em;
-  background: #3fabae;
   border: none; }
   .prov-stub a {
     text-align: center; }
 
 .prov-div {
-  background: #3fabae;
   padding-bottom: 1.5em; }
 
 .listing .prov-stub {
@@ -6010,7 +6009,7 @@ footer h3 {
   margin: 3px; }
 
 .testimonial {
-  padding: 2.2rem 1rem;
+  padding: 3.2rem 1rem;
   text-align: center; }
 
 /******************
