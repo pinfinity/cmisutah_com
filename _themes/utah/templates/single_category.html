@@ -25,9 +25,9 @@
 					<!-- <img class="center" src="{{ article_thumbnail }}" alt=""> -->
 				</div>
 
-				<div class="column small-8" data-equalizer-watch>
-					<h5>{{title}}</h5>
-					{{ content|striptags|truncate:50 }}
+				<div class="column small-8 stub-excerpt" data-equalizer-watch>
+					<h4>{{ title|truncate:50 }}</h4>
+					<i>{{ content|striptags|truncate:100 }}</i>
 				</div>
 			</div>
 			<div class="row">
