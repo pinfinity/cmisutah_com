@@ -13,123 +13,38 @@
 
     <script src="/{{ theme_path }}js/modernizr.js"></script>
 
+    <style type="text/css">
+			.previewLogo {
+				margin: 10em auto;
+				width: 90%%;
+				text-align: center;
+				display: block;
+			}
+			.indicates-required {
+				float: right;
+				font-size: 75%;
+			}
+			#download {
+				padding: 0 2em 6em;
+			}
+    </style>
+
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="column small-12">
-          <nav class="row navbar">
+      	<img class="previewLogo" src="{{ theme:img src='logo.png' }}" alt="Logo">
+      </div>
 
-            <h2 class="column small-12 medium-6 brand small-only-text-center">
-              <a href="/">
-                <img src="{{ theme:img src='logo.png' }}" alt="Logo">
-              </a>
-            </h2>
-
-            <div class="column small-12 medium-6">
-
-              <div class="show-for-medium-up column medium-6"></div>
-
-              <div id="nav-home" class="column small-4 medium-2 navbar__nav navblock">
-                <a href="/">
-                  <div class="nav-pic">
-                    <img src="{{ theme:img src='nav_home_icon.png' }}" alt="home">
-                  </div>
-                  <div class="navblock__sub d-none">
-                    <img src="{{ theme:img src='nav_home_icon_hover.png' }}" alt="home">
-                  </div>
-                </a>
-              </div>
-
-              <div id="nav-more" class="column small-4 medium-2 navbar__nav navblock">
-                <a href="/more-info">
-                  <div class="nav-pic">
-                    <img src="{{ theme:img src='nav_more_icon.png' }}" alt="home">
-                  </div>
-                  <div class="navblock__sub d-none">
-                    <img src="{{ theme:img src='nav_more_icon_hover.png' }}" alt="more-info">
-                  </div>
-                </a>
-              </div>
-
-              <div id="nav-contact" class="column small-4 medium-2 navbar__nav navblock">
-                <a href="/contact">
-                  <div class="nav-pic">
-                    <img src="{{ theme:img src='nav_contact.png' }}" alt="home">
-                  </div>
-                  <div class="navblock__sub d-none">
-                    <img src="{{ theme:img src='nav_contact_icon_hover.png' }}" alt="contact">
-                  </div>
-                </a>
-              </div>
-            </div>
-
-          </nav>
-        </div>
-      </div>  
-
-      {{ layout_content }}
-
-      <footer class="site-footer">
+			
+      <div class="row" id="download">
         <div class="row">
           
-          <div id="address" class="column small-12 medium-4 small-only-text-center">          
-            <h3>Contact Us</h3>
-            <ul class="vcard">
-              <li class="fn">The Utah Center for <br/>Minimally Invasive and <br/>Bariatric Surgery</li>
-              <li><a href="./contact#locations">2 Convenient Locations</a></li>            
-              <li class="email">Email: contact@cmibs.com</li>
-              <li class="phone">Phone: (801) 964-3855</li>
-            </ul>
-          </div>
-
-          <div id="contact" class="column small-12 medium-4 text-center">
-            <a href="./contact#locations">
-              <h3 class="map">Map and Directions</h3>
-              <img src="{{ theme:img src='map.png' }}" alt="map">
-            </a>
-          </div>
-
-          <div id="site-map" class="column small-12 medium-4 text-right small-only-text-center">
-            <h3>Site Map</h3>
-            <ul class="no-bullet">
-              <li><a href="/">Home</a></li>
-              <li><a href="/more-info">More Info</a></li>
-              <li><a href="/more-info/less-pain">Less Pain</a></li>
-              <li><a href="/more-info/less-scarring">Less Scarring</a></li>              
-              <li><a href="/more-info/quicker-recovery">Quicker Recovery</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="column small-12">
-            <p class="text-center">
-              <small>&copy; 
-              <?php
-              $this_year = date("o");
-              if ($this_year == 2014)
-                echo $this_year . " ";
-              else
-                echo " 2012 - " . $this_year . " ";
-              ?>
-            Pinfinity Consulting LLC</small></p>
-          </div>
-        </div>
-      </footer>
-
-      <div id="download" class="reveal-modal" data-reveal>
-        <h2>Minimally Invasive Surgery means less pain, less scarring, and quicker recovery!</h2>
-        <div class="row">
-          <div class="column large-6 small-12" id="cta-img" data-equalizer-watch>
-            <!-- img in css -->
-          </div>
-
                   <!-- Begin MailChimp Signup Form -->
-          <div class="column large-6 small-12" id="mc_embed_signup">
-            <p>Sign up here and we will send you more info!</p>
+          <div class="column medium-offset-2 center medium-8" id="mc_embed_signup">
+
+        		<p>Minimally Invasive Surgery means <br/>less pain, less scarring, and quicker recovery.</p>
+            <p>Sign up here for more info:</p>
 
             <form action="//utahcmis.us9.list-manage.com/subscribe/post?u=580577d7fe17f14cdc452884e&amp;id=2e61f7e288" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <div id="mc_embed_signup_scroll">
@@ -162,18 +77,12 @@
           </div><!--End mc_embed_signup-->
           
         </div>
-        
 
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
+      </div><!-- /row -->
 
-      
+    </div><!-- /container -->
 
-    </div>
-
-          
-
-    <script src="/{{ theme_path }}js/jquery.min.js"></script>
+        <script src="/{{ theme_path }}js/jquery.min.js"></script>
     <script src="/{{ theme_path }}js/foundation.min.js"></script>
     <script src="/{{ theme_path }}js/jquery.fitvids.js"></script>
     <script src="{{ theme:js }}"></script>
@@ -190,3 +99,4 @@
     
   </body>
 </html>
+
