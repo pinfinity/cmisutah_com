@@ -70,7 +70,7 @@ _content_type: markdown
 _enable_smartypants: true
 
 # set to 'true' to enable theme caching busting based on last modified timestamps
-_theme_cache_bust: false
+_theme_cache_bust: true
 
 # Specify where to save transformed images
 _transform_destination: false
@@ -85,7 +85,7 @@ _allow_php: true
 _yaml_mode: loose
 
 # Choose the markdown parser to use (standard | parsedown)
-_markdown_parser: parsedown
+_markdown_parser: standard
 
 # Choose whether you want your content (e.g. Markdown, Textile...) or your tags parsed first
 _parse_order:
@@ -167,6 +167,7 @@ _admin_nav:
   help:      true
   view_site: true
   logout:    true 
+  raven:     true
 
 # When you log in, where would you like to start?
 _admin_start_page: dashboard

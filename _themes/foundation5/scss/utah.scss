@@ -453,6 +453,15 @@ footer h3{
 	display:block;
 }
 
+.big-text {
+	.phone {
+		font-size: 166%;
+	}
+	.email {
+		font-size: 166%;
+	}
+}
+
 /******************
      Videos
 ******************/
@@ -565,7 +574,18 @@ footer h3{
 	footer .small-12 {
 		margin-bottom: 3rem;
 	}
+	.big-margin{
+			margin-top:6em !important;
+	}
+
 } 
+
+.close { 
+	font-size: 2.25em !important;
+	color: #fff !important;
+	opacity: 1 !important;
+	top: 10% !important;
+}
 
 /* only large screens */
 @media only screen and (min-width: 40.025em) {

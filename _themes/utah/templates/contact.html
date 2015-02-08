@@ -1,3 +1,77 @@
+
+<div class="columns" id='sendMessage'>
+  <h2>Send us a message</h2>
+
+  {{ if {raven:success} }}
+  	<div class="alert-box success" data-alert>
+  		<p>Success!</p>
+  		<p>Thanks for getting in touch.  You will here from us soon...</p>
+  		<a href="" class="close">&times;</a>
+  	</div>
+
+  {{ elseif {raven:has_errors} }}
+	
+	<div class="alert-box seccondary" data-alert>
+		<p>Something isn't quite right:</p>
+		<ul>
+
+	  {{ raven:errors }}
+	    {{ missing }}
+	      <li>{{ field }} is required</li>
+	    {{ /missing }}
+
+	    {{ invalid }}
+	      <li>{{ field }}: {{ message }}</li>
+	    {{ /invalid }}
+
+	  {{ /raven:errors }}
+	  </ul>
+	  <a href="" class="close">&times;</a>
+  </div>
+
+  {{ endif }}
+
+  {{ raven:form formset="contact" attr="class:contact" attr="data-abide" }}
+
+    <!-- <div class="row column"> -->
+      <div class="medium-4 columns">
+        <label for="firstname">First</label>
+        <input type="text" name="firstname" value="" />
+      </div>
+
+      <div class="medium-8 columns">
+        <label for="lastname">Last</label>
+        <input type="text" name="last_name" value="" />
+      </div>
+  <!-- </div> -->
+			<div class="row column">
+		    <label for="email">Email</label>
+		    <input type="email" name="email" value="" required />
+		  </div>
+
+		  <div class="row column">
+		    <label for="area">Regarding:</label>
+		    <select name="area" id="">
+		      <option value="none selected">- Choose a Subject -</option>
+		      <option value="gallbladder">Gallbladder</option>
+		      <option value="bariatric">Bariatric</option>
+		      <option value="other">Other</option>
+		    </select>
+		  </div>
+
+	    <div class="row column">
+		    <label for="message">Your Message</label>
+		    <textarea rows=4 name="message" value=""></textarea>
+
+		    <input type="submit" class="button foundation-button" value="Submit" />
+
+	  	</div>
+
+  {{ /raven:form }}
+
+</div>
+
 {{ content }}
 
 {{ theme:partial src="cta2" }}
+  
