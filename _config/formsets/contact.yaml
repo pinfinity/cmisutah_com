@@ -1,0 +1,68 @@
+###########################################################################################
+#
+#  EXAMPLE RAVEN FORMSET
+#
+#  Formsets can override any default settings (raven.yaml) EXCEPT master_killswitch
+#
+###########################################################################################
+
+# Location (from root) to save form submissions
+submission_save_path: _forms/contact/
+
+# Fields allowed to be submitted in the form, automatically
+# purging anything and everything else
+allowed:
+  - firstname
+  - lastname
+  - email
+  - area
+  - message
+
+# You are not required to require fields, but once you do, any missing
+# from the POST will squash this submission and send a list of
+# missing fields to your {{ raven:errors }} tagpair
+required:
+  - email
+
+submission_save_extension: yaml
+
+# Apply validation rules to specific fields. Refer to documentation
+# for a full list of available rules and their format
+validate:
+  email: email
+
+# Error messages can be mapped to your fields and passed to the
+# template upon failure. They will be available here:
+#
+# {{ raven:error }}
+#     {{ invalid }}
+#         {{ field }} : {{ message }}
+#     {{ /invalid }}
+# {{ /raven:error }}
+#
+messages:
+  email: "Please provide a valid email"
+
+# Configure notification email
+email:
+  to: al@pinfinity.co
+  from: contactForm@cmibs.com
+  subject: Contact Initiated!
+  automagic: true
+  # html_template: html_email
+  # text_template: text_email
+
+datestamp_format: "m/d/Y"
+
+control_panel:
+  fields:
+    - firstname
+    - lastname
+    - email
+    - area
+    - message
+  metrics:
+    - 
+      type: count
+      field: email
+      label: Contacts Submitted

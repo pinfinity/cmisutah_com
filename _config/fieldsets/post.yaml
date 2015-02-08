@@ -14,5 +14,6 @@ fields:
     type: tags
   content:
     type: redactor
+    image_dir: assets/img
 
 hide: true

@@ -5940,6 +5940,11 @@ footer h3 {
 #locations a {
   display: block; }
 
+.big-text .phone {
+  font-size: 166%; }
+.big-text .email {
+  font-size: 166%; }
+
 /******************
      Videos
 ******************/
@@ -5964,17 +5969,16 @@ footer h3 {
 .prov-meet {
   text-align: center;
   margin: 1.5em 1.5em 0.5em;
-  font-style: oblique; }
+  font-style: oblique;
+  font-weight: 700; }
 
 .prov-stub {
   padding: 0.825em;
-  background: #3fabae;
   border: none; }
   .prov-stub a {
     text-align: center; }
 
 .prov-div {
-  background: #3fabae;
   padding-bottom: 1.5em; }
 
 .listing .prov-stub {
@@ -6010,7 +6014,7 @@ footer h3 {
   margin: 3px; }
 
 .testimonial {
-  padding: 2.2rem 1rem;
+  padding: 3.2rem 1rem;
   text-align: center; }
 
 /******************
@@ -6037,7 +6041,15 @@ footer h3 {
   #cta-text .foundation-button:after {
     max-width: 16%; }
   footer .small-12 {
-    margin-bottom: 3rem; } }
+    margin-bottom: 3rem; }
+  .big-margin {
+    margin-top: 6em !important; } }
+
+.close {
+  font-size: 2.25em !important;
+  color: white !important;
+  opacity: 1 !important;
+  top: 10% !important; }
 
 /* only large screens */
 @media only screen and (min-width: 40.025em) {
