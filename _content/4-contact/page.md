@@ -11,7 +11,7 @@ _template: contact
    
     <ul class="big-text vcard">
       <li class="fn hide">The Utah Center for Minimally Invasive Surgery</li>
-      <li class="phone">Phone: <br/>(801) 964-3855</li>
+      <li class="phone" data-track="phone">Phone: <br/>(801) 964-3855</li>
       <li class="email hide">Email: contact@cmibs.com</li>
     </ul>
   </div>

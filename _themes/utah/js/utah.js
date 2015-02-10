@@ -4,8 +4,24 @@ $(document).foundation();
 $(document).ready(function() {
 	HandleSubscribeClick();
 	VideoAction();
-	CleanUpNoVideoResults();	
+	CleanUpNoVideoResults();
+	BindPhoneClick();	
+	BindFoundationButton()
 });
+
+function BindPhoneClick() {
+	$('[data-track=phone]').on('click', function() {
+		console.log("phone clicked");
+	})
+}
+
+function BindFoundationButton() {
+	$('.foundation-button').on('click', function() {
+		var page = document.URL;
+		var buttonText = $(this).text();
+		console.log(page, buttonText);
+	})
+}
 
 function VideoAction() {
 	var vids = $("iframe[src*='yout']");

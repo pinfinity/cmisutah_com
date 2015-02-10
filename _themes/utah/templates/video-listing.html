@@ -43,7 +43,14 @@
 							</div>
 
 							<div class="column small-8">				
-								<span>Read More&nbsp;<span class="readmore"></span></span>
+								<span>
+									{{ if categories_sentence_list ~ "/(video)/"}}
+							  		Watch Now&nbsp;
+							  	{{ else }}
+										Read More&nbsp;
+									{{ endif }}
+									<span class="readmore"></span>
+								</span>
 							</div>
 						</div>
 					</div>	
