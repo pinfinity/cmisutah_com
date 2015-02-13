@@ -6,12 +6,18 @@ $(document).ready(function() {
 	VideoAction();
 	CleanUpNoVideoResults();
 	BindPhoneClick();	
-	BindFoundationButton()
+	BindFoundationButton();
+	mixpanel.track("PageLoad",{
+		"url" : document.URL
+	});
 });
 
 function BindPhoneClick() {
 	$('[data-track=phone]').on('click', function() {
-		console.log("phone clicked");
+		//console.log("phone clicked");
+		mixpanel.track("Phone clicked", {
+    	"url": document.URL
+		});
 	})
 }
 
@@ -19,7 +25,11 @@ function BindFoundationButton() {
 	$('.foundation-button').on('click', function() {
 		var page = document.URL;
 		var buttonText = $(this).text();
-		console.log(page, buttonText);
+		//console.log(page, buttonText);
+		mixpanel.track("Button Clicked", {
+    	"url": page,
+    	"button text" : buttonText
+		});
 	})
 }
 
