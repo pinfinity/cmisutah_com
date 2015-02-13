@@ -45,7 +45,7 @@ messages:
 
 # Configure notification email
 email:
-  to: al@pinfinity.co
+  to: jeff@pinfinity.co
   from: contactForm@cmibs.com
   subject: Contact Initiated!
   automagic: true
